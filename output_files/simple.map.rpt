@@ -1,0 +1,481 @@
+Analysis & Synthesis report for simple
+Mon Jun 20 23:04:30 2016
+Quartus Prime Version 16.0.1 Build 218 06/01/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|sm_emptyfull
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: async_transmitter:ewrq
+ 14. Parameter Settings for User Entity Instance: async_transmitter:ewrq|BaudTickGen:tickgen
+ 15. Parameter Settings for User Entity Instance: LPM_FIFO:inst6
+ 16. Parameter Settings for User Entity Instance: comparator:inst
+ 17. Parameter Settings for User Entity Instance: combiner:inst9
+ 18. Parameter Settings for User Entity Instance: padder:inst11
+ 19. Parameter Settings for User Entity Instance: comparator:inst2
+ 20. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Mon Jun 20 23:04:30 2016       ;
+; Quartus Prime Version       ; 16.0.1 Build 218 06/01/2016 SJ Lite Edition ;
+; Revision Name               ; simple                                      ;
+; Top-level Entity Name       ; simple                                      ;
+; Family                      ; MAX II                                      ;
+; Total logic elements        ; 92                                          ;
+; Total pins                  ; 11                                          ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
++-----------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EPM570T100C5       ;                    ;
+; Top-level entity name                                                      ; simple             ; simple             ;
+; Family name                                                                ; MAX II             ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                         ; Library ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------+---------+
+; simple.bdf                       ; yes             ; User Block Diagram/Schematic File  ; /home/skeen/stepsniffer/simple.bdf                                                   ;         ;
+; uart.v                           ; yes             ; User Verilog HDL File              ; /home/skeen/stepsniffer/uart.v                                                       ;         ;
+; Comparator.vhd                   ; yes             ; User VHDL File                     ; /home/skeen/stepsniffer/Comparator.vhd                                               ;         ;
+; combiner.vhd                     ; yes             ; User VHDL File                     ; /home/skeen/stepsniffer/combiner.vhd                                                 ;         ;
+; padder.vhd                       ; yes             ; User VHDL File                     ; /home/skeen/stepsniffer/padder.vhd                                                   ;         ;
+; ClockPrescaler.vhd               ; yes             ; User VHDL File                     ; /home/skeen/stepsniffer/ClockPrescaler.vhd                                           ;         ;
+; lpm_fifo.tdf                     ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_fifo.tdf            ;         ;
+; scfifo.inc                       ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/scfifo.inc              ;         ;
+; scfifo.tdf                       ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/scfifo.tdf              ;         ;
+; a_regfifo.inc                    ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_regfifo.inc           ;         ;
+; a_dpfifo.inc                     ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_dpfifo.inc            ;         ;
+; a_i2fifo.inc                     ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_i2fifo.inc            ;         ;
+; a_fffifo.inc                     ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fffifo.inc            ;         ;
+; a_f2fifo.inc                     ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_f2fifo.inc            ;         ;
+; aglobal160.inc                   ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/aglobal160.inc          ;         ;
+; a_fffifo.tdf                     ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fffifo.tdf            ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_counter.inc         ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_compare.inc         ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
+; lpm_ff.inc                       ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_ff.inc              ;         ;
+; a_fefifo.inc                     ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fefifo.inc            ;         ;
+; lpm_ff.tdf                       ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_ff.tdf              ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_mux.tdf             ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/muxlut.inc              ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/bypassff.inc            ;         ;
+; altshift.inc                     ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/altshift.inc            ;         ;
+; db/mux_gbc.tdf                   ; yes             ; Auto-Generated Megafunction        ; /home/skeen/stepsniffer/db/mux_gbc.tdf                                               ;         ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_counter.tdf         ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
+; cmpconst.inc                     ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/cmpconst.inc            ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/dffeea.inc              ;         ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/alt_counter_stratix.inc ;         ;
+; db/cntr_cpe.tdf                  ; yes             ; Auto-Generated Megafunction        ; /home/skeen/stepsniffer/db/cntr_cpe.tdf                                              ;         ;
+; a_fefifo.tdf                     ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fefifo.tdf            ;         ;
+; lpm_compare.tdf                  ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_compare.tdf         ;         ;
+; comptree.inc                     ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/comptree.inc            ;         ;
+; db/cmpr_itf.tdf                  ; yes             ; Auto-Generated Megafunction        ; /home/skeen/stepsniffer/db/cmpr_itf.tdf                                              ;         ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+; Total logic elements                        ; 92      ;
+;     -- Combinational with no register       ; 30      ;
+;     -- Register only                        ; 2       ;
+;     -- Combinational with a register        ; 60      ;
+;                                             ;         ;
+; Logic element usage by number of LUT inputs ;         ;
+;     -- 4 input functions                    ; 32      ;
+;     -- 3 input functions                    ; 9       ;
+;     -- 2 input functions                    ; 45      ;
+;     -- 1 input functions                    ; 3       ;
+;     -- 0 input functions                    ; 1       ;
+;                                             ;         ;
+; Logic elements by mode                      ;         ;
+;     -- normal mode                          ; 48      ;
+;     -- arithmetic mode                      ; 44      ;
+;     -- qfbk mode                            ; 0       ;
+;     -- register cascade mode                ; 0       ;
+;     -- synchronous clear/load mode          ; 41      ;
+;     -- asynchronous clear/load mode         ; 0       ;
+;                                             ;         ;
+; Total registers                             ; 62      ;
+; Total logic cells in carry chains           ; 47      ;
+; I/O pins                                    ; 11      ;
+; Maximum fan-out node                        ; OSC_CLK ;
+; Maximum fan-out                             ; 62      ;
+; Total fan-out                               ; 380     ;
+; Average fan-out                             ; 3.69    ;
++---------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                 ;
++------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node               ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                              ; Entity Name       ; Library Name ;
++------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------+-------------------+--------------+
+; |simple                                  ; 92 (1)      ; 62           ; 0          ; 11   ; 0            ; 30 (1)       ; 2 (0)             ; 60 (0)           ; 47 (0)          ; 0 (0)      ; |simple                                                                                          ; simple            ; work         ;
+;    |ClockPrescaler:inst31|               ; 34 (34)     ; 25           ; 0          ; 0    ; 0            ; 9 (9)        ; 1 (1)             ; 24 (24)          ; 24 (24)         ; 0 (0)      ; |simple|ClockPrescaler:inst31                                                                    ; ClockPrescaler    ; work         ;
+;    |async_transmitter:ewrq|              ; 38 (21)     ; 27           ; 0          ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 27 (10)          ; 17 (0)          ; 0 (0)      ; |simple|async_transmitter:ewrq                                                                   ; async_transmitter ; work         ;
+;       |BaudTickGen:tickgen|              ; 17 (17)     ; 17           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 17 (17)          ; 17 (17)         ; 0 (0)      ; |simple|async_transmitter:ewrq|BaudTickGen:tickgen                                               ; BaudTickGen       ; work         ;
+;    |comparator:inst|                     ; 2 (2)       ; 1            ; 0          ; 0    ; 0            ; 1 (1)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |simple|comparator:inst                                                                          ; comparator        ; work         ;
+;    |lpm_fifo:inst6|                      ; 17 (0)      ; 9            ; 0          ; 0    ; 0            ; 8 (0)        ; 0 (0)             ; 9 (0)            ; 6 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6                                                                           ; lpm_fifo          ; work         ;
+;       |scfifo:myFIFO|                    ; 17 (0)      ; 9            ; 0          ; 0    ; 0            ; 8 (0)        ; 0 (0)             ; 9 (0)            ; 6 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO                                                             ; scfifo            ; work         ;
+;          |a_fffifo:subfifo|              ; 17 (2)      ; 9            ; 0          ; 0    ; 0            ; 8 (2)        ; 0 (0)             ; 9 (0)            ; 6 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo                                            ; a_fffifo          ; work         ;
+;             |a_fefifo:fifo_state|        ; 9 (9)       ; 3            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state                        ; a_fefifo          ; work         ;
+;             |lpm_counter:rd_ptr|         ; 6 (0)       ; 6            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 6 (0)            ; 6 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr                         ; lpm_counter       ; work         ;
+;                |cntr_cpe:auto_generated| ; 6 (6)       ; 6            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 6 (6)            ; 6 (6)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated ; cntr_cpe          ; work         ;
++------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------+
+; State Machine - |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|sm_emptyfull ;
++--------------+--------------+------------+-------------------------------------------------------------+
+; Name         ; state_middle ; state_full ; state_empty                                                 ;
++--------------+--------------+------------+-------------------------------------------------------------+
+; state_empty  ; 0            ; 0          ; 0                                                           ;
+; state_middle ; 1            ; 0          ; 1                                                           ;
+; state_full   ; 0            ; 1          ; 1                                                           ;
++--------------+--------------+------------+-------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; async_transmitter:ewrq|TxD_shift[6,7] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 2 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                              ;
++-------------------------------------+---------------------------+----------------------------------------+
+; Register name                       ; Reason for Removal        ; Registers Removed due to This Register ;
++-------------------------------------+---------------------------+----------------------------------------+
+; async_transmitter:ewrq|TxD_shift[7] ; Stuck at GND              ; async_transmitter:ewrq|TxD_shift[6]    ;
+;                                     ; due to stuck port data_in ;                                        ;
++-------------------------------------+---------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 62    ;
+; Number of registers using Synchronous Clear  ; 24    ;
+; Number of registers using Synchronous Load   ; 17    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 11    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |simple|async_transmitter:ewrq|TxD_shift[1] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: async_transmitter:ewrq ;
++----------------+----------+-----------------------------------------+
+; Parameter Name ; Value    ; Type                                    ;
++----------------+----------+-----------------------------------------+
+; ClkFrequency   ; 50000000 ; Signed Integer                          ;
+; Baud           ; 115200   ; Signed Integer                          ;
++----------------+----------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: async_transmitter:ewrq|BaudTickGen:tickgen ;
++----------------+----------+-------------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                        ;
++----------------+----------+-------------------------------------------------------------+
+; ClkFrequency   ; 50000000 ; Signed Integer                                              ;
+; Baud           ; 115200   ; Signed Integer                                              ;
+; Oversampling   ; 1        ; Signed Integer                                              ;
++----------------+----------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_FIFO:inst6 ;
++-------------------------+-------+---------------------------+
+; Parameter Name          ; Value ; Type                      ;
++-------------------------+-------+---------------------------+
+; lpm_width               ; 6     ; Untyped                   ;
+; LPM_NUMWORDS            ; 64    ; Untyped                   ;
+; LPM_WIDTHU              ; 6     ; Untyped                   ;
+; LPM_SHOWAHEAD           ; OFF   ; Untyped                   ;
+; UNDERFLOW_CHECKING      ; ON    ; Untyped                   ;
+; OVERFLOW_CHECKING       ; ON    ; Untyped                   ;
+; ALLOW_RWCYCLE_WHEN_FULL ; OFF   ; Untyped                   ;
+; USE_EAB                 ; ON    ; Untyped                   ;
++-------------------------+-------+---------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: comparator:inst ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; n              ; 1     ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: combiner:inst9 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; na             ; 3     ; Signed Integer                     ;
+; nb             ; 3     ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: padder:inst11 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; input_bits     ; 6     ; Signed Integer                    ;
+; pad_value      ; '0'   ; Enumerated                        ;
+; output_bits    ; 8     ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: comparator:inst2 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; n              ; 3     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.0.1 Build 218 06/01/2016 SJ Lite Edition
+    Info: Processing started: Mon Jun 20 23:04:18 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off simple -c simple
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file simple.bdf
+    Info (12023): Found entity 1: simple
+Info (12021): Found 4 design units, including 4 entities, in source file uart.v
+    Info (12023): Found entity 1: async_transmitter File: /home/skeen/stepsniffer/uart.v Line: 13
+    Info (12023): Found entity 2: async_receiver File: /home/skeen/stepsniffer/uart.v Line: 74
+    Info (12023): Found entity 3: ASSERTION_ERROR File: /home/skeen/stepsniffer/uart.v Line: 179
+    Info (12023): Found entity 4: BaudTickGen File: /home/skeen/stepsniffer/uart.v Line: 184
+Info (12021): Found 2 design units, including 1 entities, in source file Comparator.vhd
+    Info (12022): Found design unit 1: comparator-comparator_arch File: /home/skeen/stepsniffer/Comparator.vhd Line: 14
+    Info (12023): Found entity 1: comparator File: /home/skeen/stepsniffer/Comparator.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file combiner.vhd
+    Info (12022): Found design unit 1: combiner-combiner_arch File: /home/skeen/stepsniffer/combiner.vhd Line: 17
+    Info (12023): Found entity 1: combiner File: /home/skeen/stepsniffer/combiner.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file padder.vhd
+    Info (12022): Found design unit 1: padder-padder_arch File: /home/skeen/stepsniffer/padder.vhd Line: 17
+    Info (12023): Found entity 1: padder File: /home/skeen/stepsniffer/padder.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file ClockPrescaler.vhd
+    Info (12022): Found design unit 1: ClockPrescaler-Behavioral File: /home/skeen/stepsniffer/ClockPrescaler.vhd Line: 12
+    Info (12023): Found entity 1: ClockPrescaler File: /home/skeen/stepsniffer/ClockPrescaler.vhd Line: 5
+Info (12127): Elaborating entity "simple" for the top level hierarchy
+Info (12128): Elaborating entity "async_transmitter" for hierarchy "async_transmitter:ewrq"
+Info (12128): Elaborating entity "BaudTickGen" for hierarchy "async_transmitter:ewrq|BaudTickGen:tickgen" File: /home/skeen/stepsniffer/uart.v Line: 36
+Info (12128): Elaborating entity "LPM_FIFO" for hierarchy "LPM_FIFO:inst6"
+Info (12130): Elaborated megafunction instantiation "LPM_FIFO:inst6"
+Info (12133): Instantiated megafunction "LPM_FIFO:inst6" with the following parameter:
+    Info (12134): Parameter "ALLOW_RWCYCLE_WHEN_FULL" = "OFF"
+    Info (12134): Parameter "LPM_NUMWORDS" = "64"
+    Info (12134): Parameter "LPM_SHOWAHEAD" = "OFF"
+    Info (12134): Parameter "LPM_WIDTH" = "6"
+    Info (12134): Parameter "LPM_WIDTHU" = "6"
+    Info (12134): Parameter "OVERFLOW_CHECKING" = "ON"
+    Info (12134): Parameter "UNDERFLOW_CHECKING" = "ON"
+    Info (12134): Parameter "USE_EAB" = "ON"
+Info (12128): Elaborating entity "scfifo" for hierarchy "LPM_FIFO:inst6|scfifo:myFIFO" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_fifo.tdf Line: 54
+Info (12131): Elaborated megafunction instantiation "LPM_FIFO:inst6|scfifo:myFIFO", which is child of megafunction instantiation "LPM_FIFO:inst6" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_fifo.tdf Line: 54
+Info (12128): Elaborating entity "a_fffifo" for hierarchy "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/scfifo.tdf Line: 279
+Info (12131): Elaborated megafunction instantiation "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo", which is child of megafunction instantiation "LPM_FIFO:inst6" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/scfifo.tdf Line: 279
+Info (12128): Elaborating entity "lpm_ff" for hierarchy "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[63]" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fffifo.tdf Line: 102
+Info (12131): Elaborated megafunction instantiation "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[63]", which is child of megafunction instantiation "LPM_FIFO:inst6" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fffifo.tdf Line: 102
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_mux:last_row_data_out_mux" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fffifo.tdf Line: 103
+Info (12131): Elaborated megafunction instantiation "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_mux:last_row_data_out_mux", which is child of megafunction instantiation "LPM_FIFO:inst6" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fffifo.tdf Line: 103
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_gbc.tdf
+    Info (12023): Found entity 1: mux_gbc File: /home/skeen/stepsniffer/db/mux_gbc.tdf Line: 23
+Info (12128): Elaborating entity "mux_gbc" for hierarchy "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_mux:last_row_data_out_mux|mux_gbc:auto_generated" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
+Info (12128): Elaborating entity "lpm_counter" for hierarchy "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fffifo.tdf Line: 105
+Info (12131): Elaborated megafunction instantiation "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr", which is child of megafunction instantiation "LPM_FIFO:inst6" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fffifo.tdf Line: 105
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_cpe.tdf
+    Info (12023): Found entity 1: cntr_cpe File: /home/skeen/stepsniffer/db/cntr_cpe.tdf Line: 26
+Info (12128): Elaborating entity "cntr_cpe" for hierarchy "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_counter.tdf Line: 259
+Info (12128): Elaborating entity "a_fefifo" for hierarchy "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fffifo.tdf Line: 112
+Info (12131): Elaborated megafunction instantiation "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state", which is child of megafunction instantiation "LPM_FIFO:inst6" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fffifo.tdf Line: 112
+Info (12128): Elaborating entity "lpm_compare" for hierarchy "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|lpm_compare:is_almost_empty_compare" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fefifo.tdf Line: 77
+Info (12131): Elaborated megafunction instantiation "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|lpm_compare:is_almost_empty_compare", which is child of megafunction instantiation "LPM_FIFO:inst6" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fefifo.tdf Line: 77
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_itf.tdf
+    Info (12023): Found entity 1: cmpr_itf File: /home/skeen/stepsniffer/db/cmpr_itf.tdf Line: 23
+Info (12128): Elaborating entity "cmpr_itf" for hierarchy "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|lpm_compare:is_almost_empty_compare|cmpr_itf:auto_generated" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_compare.tdf Line: 281
+Info (12128): Elaborating entity "lpm_compare" for hierarchy "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|lpm_compare:is_almost_full_compare" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fefifo.tdf Line: 82
+Info (12131): Elaborated megafunction instantiation "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|lpm_compare:is_almost_full_compare", which is child of megafunction instantiation "LPM_FIFO:inst6" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fefifo.tdf Line: 82
+Info (12128): Elaborating entity "ClockPrescaler" for hierarchy "ClockPrescaler:inst31"
+Warning (10540): VHDL Signal Declaration warning at ClockPrescaler.vhd(14): used explicit default value for signal "prescaler" because signal was never assigned a value File: /home/skeen/stepsniffer/ClockPrescaler.vhd Line: 14
+Info (12128): Elaborating entity "comparator" for hierarchy "comparator:inst"
+Info (12128): Elaborating entity "combiner" for hierarchy "combiner:inst9"
+Info (12128): Elaborating entity "padder" for hierarchy "padder:inst11"
+Info (12128): Elaborating entity "comparator" for hierarchy "comparator:inst2"
+Warning (21074): Design contains 6 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "steps[2]"
+    Warning (15610): No output dependent on input pin "steps[1]"
+    Warning (15610): No output dependent on input pin "steps[0]"
+    Warning (15610): No output dependent on input pin "dirs[2]"
+    Warning (15610): No output dependent on input pin "dirs[1]"
+    Warning (15610): No output dependent on input pin "dirs[0]"
+Info (21057): Implemented 103 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 4 output pins
+    Info (21061): Implemented 92 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 1262 megabytes
+    Info: Processing ended: Mon Jun 20 23:04:30 2016
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:28
+
+

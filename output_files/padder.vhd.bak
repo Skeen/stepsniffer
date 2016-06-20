@@ -1,0 +1,21 @@
+library ieee;
+use ieee.std_logic_misc.all;
+use ieee.std_logic_1164.all;
+
+entity padder is
+generic(
+input_bits : positive := 3;
+pad_value : std_logic := '0';
+bits : positive := 8
+);
+port(
+A: in std_logic_vector(Na-1 downto 0);
+B: in std_logic_vector(Nb-1 downto 0);
+Z: out std_logic_vector(Nz-1 downto 0)
+);
+end combiner;
+
+architecture combiner_arch of combiner is
+begin
+   Z <= (Nz-1 downto (Na+Nb) => '0') & A & B;
+end combiner_arch;

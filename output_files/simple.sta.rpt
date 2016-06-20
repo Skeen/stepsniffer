@@ -1,0 +1,475 @@
+TimeQuest Timing Analyzer report for simple
+Mon Jun 20 23:04:35 2016
+Quartus Prime Version 16.0.1 Build 218 06/01/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'OSC_CLK'
+ 12. Hold: 'OSC_CLK'
+ 13. Setup Transfers
+ 14. Hold Transfers
+ 15. Report TCCS
+ 16. Report RSKM
+ 17. Unconstrained Paths Summary
+ 18. Clock Status Summary
+ 19. Unconstrained Output Ports
+ 20. Unconstrained Output Ports
+ 21. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                           ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 16.0.1 Build 218 06/01/2016 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
+; Revision Name         ; simple                                              ;
+; Device Family         ; MAX II                                              ;
+; Device Name           ; EPM570T100C5                                        ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Slow Model                                          ;
+; Rise/Fall Delays      ; Unavailable                                         ;
++-----------------------+-----------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                              ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets     ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+; OSC_CLK    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { OSC_CLK } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+
+
++--------------------------------------------------+
+; Fmax Summary                                     ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 110.41 MHz ; 110.41 MHz      ; OSC_CLK    ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++----------------------------------+
+; Setup Summary                    ;
++---------+--------+---------------+
+; Clock   ; Slack  ; End Point TNS ;
++---------+--------+---------------+
+; OSC_CLK ; -8.057 ; -407.415      ;
++---------+--------+---------------+
+
+
++---------------------------------+
+; Hold Summary                    ;
++---------+-------+---------------+
+; Clock   ; Slack ; End Point TNS ;
++---------+-------+---------------+
+; OSC_CLK ; 1.785 ; 0.000         ;
++---------+-------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++----------------------------------+
+; Minimum Pulse Width Summary      ;
++---------+--------+---------------+
+; Clock   ; Slack  ; End Point TNS ;
++---------+--------+---------------+
+; OSC_CLK ; -2.289 ; -2.289        ;
++---------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'OSC_CLK'                                                                                                                                                         ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -8.057 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[22] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.724      ;
+; -8.057 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[23] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.724      ;
+; -8.057 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[17] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.724      ;
+; -8.057 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[18] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.724      ;
+; -8.057 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[19] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.724      ;
+; -8.057 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[20] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.724      ;
+; -8.057 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[21] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.724      ;
+; -8.048 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[16] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.715      ;
+; -8.048 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[15] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.715      ;
+; -8.048 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[10] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.715      ;
+; -8.048 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[11] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.715      ;
+; -8.048 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[12] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.715      ;
+; -8.048 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[13] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.715      ;
+; -8.048 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[7]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.715      ;
+; -8.048 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[8]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.715      ;
+; -8.048 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[9]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.715      ;
+; -8.048 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[14] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.715      ;
+; -7.936 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[22] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.603      ;
+; -7.936 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[23] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.603      ;
+; -7.936 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[17] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.603      ;
+; -7.936 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[18] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.603      ;
+; -7.936 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[19] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.603      ;
+; -7.936 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[20] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.603      ;
+; -7.936 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[21] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.603      ;
+; -7.927 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[16] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.594      ;
+; -7.927 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[15] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.594      ;
+; -7.927 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[10] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.594      ;
+; -7.927 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[11] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.594      ;
+; -7.927 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[12] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.594      ;
+; -7.927 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[13] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.594      ;
+; -7.927 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[7]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.594      ;
+; -7.927 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[8]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.594      ;
+; -7.927 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[9]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.594      ;
+; -7.927 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[14] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.594      ;
+; -7.861 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[22] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.528      ;
+; -7.861 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[23] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.528      ;
+; -7.861 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[17] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.528      ;
+; -7.861 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[18] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.528      ;
+; -7.861 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[19] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.528      ;
+; -7.861 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[20] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.528      ;
+; -7.861 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[21] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.528      ;
+; -7.855 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[22] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.522      ;
+; -7.855 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[23] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.522      ;
+; -7.855 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[17] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.522      ;
+; -7.855 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[18] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.522      ;
+; -7.855 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[19] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.522      ;
+; -7.855 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[20] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.522      ;
+; -7.855 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[21] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.522      ;
+; -7.852 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[16] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.519      ;
+; -7.852 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[15] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.519      ;
+; -7.852 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[10] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.519      ;
+; -7.852 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[11] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.519      ;
+; -7.852 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[12] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.519      ;
+; -7.852 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[13] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.519      ;
+; -7.852 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[7]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.519      ;
+; -7.852 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[8]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.519      ;
+; -7.852 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[9]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.519      ;
+; -7.852 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[14] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.519      ;
+; -7.846 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[16] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.513      ;
+; -7.846 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[15] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.513      ;
+; -7.846 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[10] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.513      ;
+; -7.846 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[11] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.513      ;
+; -7.846 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[12] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.513      ;
+; -7.846 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[13] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.513      ;
+; -7.846 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[7]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.513      ;
+; -7.846 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[8]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.513      ;
+; -7.846 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[9]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.513      ;
+; -7.846 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[14] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.513      ;
+; -7.779 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[22] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.446      ;
+; -7.779 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[23] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.446      ;
+; -7.779 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[17] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.446      ;
+; -7.779 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[18] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.446      ;
+; -7.779 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[19] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.446      ;
+; -7.779 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[20] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.446      ;
+; -7.779 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[21] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.446      ;
+; -7.770 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[16] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.437      ;
+; -7.770 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[15] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.437      ;
+; -7.770 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[10] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.437      ;
+; -7.770 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[11] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.437      ;
+; -7.770 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[12] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.437      ;
+; -7.770 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[13] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.437      ;
+; -7.770 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[7]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.437      ;
+; -7.770 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[8]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.437      ;
+; -7.770 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[9]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.437      ;
+; -7.770 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[14] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.437      ;
+; -7.748 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[22] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.415      ;
+; -7.748 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[23] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.415      ;
+; -7.748 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[17] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.415      ;
+; -7.748 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[18] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.415      ;
+; -7.748 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[19] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.415      ;
+; -7.748 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[20] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.415      ;
+; -7.748 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[21] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.415      ;
+; -7.739 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[16] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.406      ;
+; -7.739 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[15] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.406      ;
+; -7.739 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[10] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.406      ;
+; -7.739 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[11] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.406      ;
+; -7.739 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[12] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.406      ;
+; -7.739 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[13] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.406      ;
+; -7.739 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[7]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.406      ;
+; -7.739 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[8]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.406      ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'OSC_CLK'                                                                                                                                                                                                                                                                       ;
++-------+----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                                          ; To Node                                                                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.785 ; async_transmitter:ewrq|TxD_state[1]                                                                ; async_transmitter:ewrq|TxD_state[3]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.006      ;
+; 1.928 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|state_empty                      ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|state_empty                      ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.149      ;
+; 1.944 ; async_transmitter:ewrq|TxD_shift[5]                                                                ; async_transmitter:ewrq|TxD_shift[4]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.165      ;
+; 1.989 ; async_transmitter:ewrq|TxD_state[0]                                                                ; async_transmitter:ewrq|TxD_state[3]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.210      ;
+; 2.034 ; async_transmitter:ewrq|TxD_state[3]                                                                ; async_transmitter:ewrq|TxD_state[1]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.255      ;
+; 2.037 ; async_transmitter:ewrq|TxD_state[3]                                                                ; async_transmitter:ewrq|TxD_state[2]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.258      ;
+; 2.060 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[5] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[5] ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.281      ;
+; 2.107 ; ClockPrescaler:inst31|prescaler_counter[6]                                                         ; ClockPrescaler:inst31|prescaler_counter[6]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.328      ;
+; 2.108 ; ClockPrescaler:inst31|prescaler_counter[4]                                                         ; ClockPrescaler:inst31|prescaler_counter[4]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.329      ;
+; 2.108 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[6]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[6]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.329      ;
+; 2.116 ; ClockPrescaler:inst31|prescaler_counter[7]                                                         ; ClockPrescaler:inst31|prescaler_counter[7]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.337      ;
+; 2.116 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[9]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[9]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.337      ;
+; 2.117 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[16]                                                 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[16]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; ClockPrescaler:inst31|prescaler_counter[14]                                                        ; ClockPrescaler:inst31|prescaler_counter[14]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[11]                                                 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[11]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[10]                                                 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[10]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[8]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[8]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[1]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[1]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.338      ;
+; 2.126 ; ClockPrescaler:inst31|prescaler_counter[16]                                                        ; ClockPrescaler:inst31|prescaler_counter[16]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; ClockPrescaler:inst31|prescaler_counter[8]                                                         ; ClockPrescaler:inst31|prescaler_counter[8]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; ClockPrescaler:inst31|prescaler_counter[9]                                                         ; ClockPrescaler:inst31|prescaler_counter[9]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.347      ;
+; 2.127 ; async_transmitter:ewrq|TxD_shift[2]                                                                ; async_transmitter:ewrq|TxD_shift[1]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.348      ;
+; 2.131 ; async_transmitter:ewrq|TxD_shift[1]                                                                ; async_transmitter:ewrq|TxD_shift[0]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.352      ;
+; 2.136 ; ClockPrescaler:inst31|prescaler_counter[19]                                                        ; ClockPrescaler:inst31|prescaler_counter[19]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.357      ;
+; 2.212 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[12]                                                 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[12]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.433      ;
+; 2.216 ; async_transmitter:ewrq|TxD_shift[3]                                                                ; async_transmitter:ewrq|TxD_shift[2]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.437      ;
+; 2.221 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[2] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[2] ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.442      ;
+; 2.221 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[4] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[4] ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.442      ;
+; 2.221 ; ClockPrescaler:inst31|prescaler_counter[15]                                                        ; ClockPrescaler:inst31|prescaler_counter[15]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.442      ;
+; 2.221 ; ClockPrescaler:inst31|prescaler_counter[10]                                                        ; ClockPrescaler:inst31|prescaler_counter[10]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.442      ;
+; 2.221 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[7]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[7]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.442      ;
+; 2.221 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[2]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[2]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.442      ;
+; 2.222 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[3] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[3] ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.443      ;
+; 2.230 ; ClockPrescaler:inst31|prescaler_counter[12]                                                        ; ClockPrescaler:inst31|prescaler_counter[12]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.451      ;
+; 2.230 ; ClockPrescaler:inst31|prescaler_counter[5]                                                         ; ClockPrescaler:inst31|prescaler_counter[5]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.451      ;
+; 2.230 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[14]                                                 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[14]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.451      ;
+; 2.230 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[4]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[4]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.451      ;
+; 2.231 ; ClockPrescaler:inst31|prescaler_counter[11]                                                        ; ClockPrescaler:inst31|prescaler_counter[11]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; ClockPrescaler:inst31|prescaler_counter[13]                                                        ; ClockPrescaler:inst31|prescaler_counter[13]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[15]                                                 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[15]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[13]                                                 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[13]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[5]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[5]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[3]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[3]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.452      ;
+; 2.233 ; ClockPrescaler:inst31|prescaler_counter[20]                                                        ; ClockPrescaler:inst31|prescaler_counter[20]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.454      ;
+; 2.235 ; async_transmitter:ewrq|TxD_state[3]                                                                ; async_transmitter:ewrq|TxD_state[3]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.456      ;
+; 2.242 ; ClockPrescaler:inst31|prescaler_counter[0]                                                         ; ClockPrescaler:inst31|prescaler_counter[0]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.463      ;
+; 2.244 ; async_transmitter:ewrq|TxD_state[1]                                                                ; async_transmitter:ewrq|TxD_state[1]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.465      ;
+; 2.244 ; async_transmitter:ewrq|TxD_shift[4]                                                                ; async_transmitter:ewrq|TxD_shift[3]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.465      ;
+; 2.248 ; ClockPrescaler:inst31|prescaler_counter[22]                                                        ; ClockPrescaler:inst31|prescaler_counter[22]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.469      ;
+; 2.248 ; ClockPrescaler:inst31|prescaler_counter[3]                                                         ; ClockPrescaler:inst31|prescaler_counter[3]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.469      ;
+; 2.260 ; ClockPrescaler:inst31|prescaler_counter[2]                                                         ; ClockPrescaler:inst31|prescaler_counter[2]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.481      ;
+; 2.260 ; ClockPrescaler:inst31|prescaler_counter[23]                                                        ; ClockPrescaler:inst31|prescaler_counter[23]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.481      ;
+; 2.261 ; async_transmitter:ewrq|TxD_state[3]                                                                ; async_transmitter:ewrq|TxD_state[0]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.482      ;
+; 2.261 ; ClockPrescaler:inst31|prescaler_counter[1]                                                         ; ClockPrescaler:inst31|prescaler_counter[1]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.482      ;
+; 2.262 ; ClockPrescaler:inst31|prescaler_counter[21]                                                        ; ClockPrescaler:inst31|prescaler_counter[21]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.483      ;
+; 2.278 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|state_middle                     ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|state_full                       ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.499      ;
+; 2.283 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|state_middle                     ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|state_empty                      ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.504      ;
+; 2.293 ; async_transmitter:ewrq|TxD_state[0]                                                                ; async_transmitter:ewrq|TxD_state[0]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.514      ;
+; 2.500 ; ClockPrescaler:inst31|prescaler_counter[18]                                                        ; ClockPrescaler:inst31|prescaler_counter[18]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.721      ;
+; 2.508 ; ClockPrescaler:inst31|prescaler_counter[17]                                                        ; ClockPrescaler:inst31|prescaler_counter[17]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.729      ;
+; 2.543 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|state_full                       ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|state_full                       ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.764      ;
+; 2.605 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[1] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[1] ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.826      ;
+; 2.802 ; comparator:inst|data_buffer[0]                                                                     ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|state_full                       ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.023      ;
+; 2.807 ; async_transmitter:ewrq|TxD_state[1]                                                                ; async_transmitter:ewrq|TxD_state[2]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.028      ;
+; 2.940 ; ClockPrescaler:inst31|prescaler_counter[4]                                                         ; ClockPrescaler:inst31|prescaler_counter[5]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.161      ;
+; 2.940 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[6]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[7]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.161      ;
+; 2.943 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[4] ; async_transmitter:ewrq|TxD_shift[4]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.164      ;
+; 2.948 ; ClockPrescaler:inst31|prescaler_counter[7]                                                         ; ClockPrescaler:inst31|prescaler_counter[8]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.169      ;
+; 2.948 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[9]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[10]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.169      ;
+; 2.949 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[16]                                                 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[17]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.170      ;
+; 2.949 ; ClockPrescaler:inst31|prescaler_counter[14]                                                        ; ClockPrescaler:inst31|prescaler_counter[15]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.170      ;
+; 2.949 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[11]                                                 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[12]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.170      ;
+; 2.949 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[10]                                                 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[11]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.170      ;
+; 2.949 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[1]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[2]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.170      ;
+; 2.958 ; ClockPrescaler:inst31|prescaler_counter[9]                                                         ; ClockPrescaler:inst31|prescaler_counter[10]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.179      ;
+; 2.958 ; ClockPrescaler:inst31|prescaler_counter[8]                                                         ; ClockPrescaler:inst31|prescaler_counter[9]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.179      ;
+; 2.968 ; ClockPrescaler:inst31|prescaler_counter[19]                                                        ; ClockPrescaler:inst31|prescaler_counter[20]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.189      ;
+; 2.980 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|state_empty                      ; async_transmitter:ewrq|TxD_shift[2]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.201      ;
+; 2.998 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|state_empty                      ; async_transmitter:ewrq|TxD_shift[3]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.219      ;
+; 3.005 ; async_transmitter:ewrq|TxD_state[2]                                                                ; async_transmitter:ewrq|TxD_state[0]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.226      ;
+; 3.051 ; ClockPrescaler:inst31|prescaler_counter[4]                                                         ; ClockPrescaler:inst31|prescaler_counter[6]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.272      ;
+; 3.051 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[6]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[8]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.272      ;
+; 3.059 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[9]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[11]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.280      ;
+; 3.059 ; ClockPrescaler:inst31|prescaler_counter[7]                                                         ; ClockPrescaler:inst31|prescaler_counter[9]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.280      ;
+; 3.060 ; ClockPrescaler:inst31|prescaler_counter[14]                                                        ; ClockPrescaler:inst31|prescaler_counter[16]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.281      ;
+; 3.060 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[11]                                                 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[13]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.281      ;
+; 3.060 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[1]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[3]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.281      ;
+; 3.060 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[10]                                                 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[12]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.281      ;
+; 3.069 ; ClockPrescaler:inst31|prescaler_counter[9]                                                         ; ClockPrescaler:inst31|prescaler_counter[11]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.290      ;
+; 3.069 ; ClockPrescaler:inst31|prescaler_counter[8]                                                         ; ClockPrescaler:inst31|prescaler_counter[10]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.290      ;
+; 3.079 ; ClockPrescaler:inst31|prescaler_counter[19]                                                        ; ClockPrescaler:inst31|prescaler_counter[21]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.300      ;
+; 3.107 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[1] ; async_transmitter:ewrq|TxD_shift[1]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.328      ;
+; 3.110 ; ClockPrescaler:inst31|prescaler_counter[23]                                                        ; ClockPrescaler:inst31|newClock                                                                     ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.331      ;
+; 3.152 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[12]                                                 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[13]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.373      ;
+; 3.161 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[2] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[3] ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.382      ;
+; 3.161 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[4] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[5] ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.382      ;
+; 3.161 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[7]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[8]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.382      ;
+; 3.161 ; ClockPrescaler:inst31|prescaler_counter[15]                                                        ; ClockPrescaler:inst31|prescaler_counter[16]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.382      ;
+; 3.161 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[2]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[3]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.382      ;
+; 3.161 ; ClockPrescaler:inst31|prescaler_counter[10]                                                        ; ClockPrescaler:inst31|prescaler_counter[11]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.382      ;
++-------+----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; OSC_CLK    ; OSC_CLK  ; 1808     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; OSC_CLK    ; OSC_CLK  ; 1808     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 4     ; 4    ;
+; Unconstrained Output Port Paths ; 9     ; 9    ;
++---------------------------------+-------+------+
+
+
++----------------------------------------+
+; Clock Status Summary                   ;
++---------+---------+------+-------------+
+; Target  ; Clock   ; Type ; Status      ;
++---------+---------+------+-------------+
+; OSC_CLK ; OSC_CLK ; Base ; Constrained ;
++---------+---------+------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; BufferEmpty ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; BufferFull  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; TX_OUTPUT   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; TxFree      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; BufferEmpty ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; BufferFull  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; TX_OUTPUT   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; TxFree      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 16.0.1 Build 218 06/01/2016 SJ Lite Edition
+    Info: Processing started: Mon Jun 20 23:04:35 2016
+Info: Command: quartus_sta simple -c simple
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'simple.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name OSC_CLK OSC_CLK
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -8.057
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -8.057            -407.415 OSC_CLK 
+Info (332146): Worst-case hold slack is 1.785
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.785               0.000 OSC_CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -2.289
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.289              -2.289 OSC_CLK 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 994 megabytes
+    Info: Processing ended: Mon Jun 20 23:04:35 2016
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

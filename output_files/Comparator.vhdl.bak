@@ -1,0 +1,9 @@
+use ieee.std_logic_misc.all;
+
+process (cp, l1)
+begin
+    if rising_edge(cp) then
+        rL1 <= l1;
+    end if;
+end process;
+change <= or_reduce(rL1 xor l1);
