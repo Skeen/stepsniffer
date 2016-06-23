@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for simple
-Mon Jun 20 23:04:35 2016
+Thu Jun 23 19:59:20 2016
 Quartus Prime Version 16.0.1 Build 218 06/01/2016 SJ Lite Edition
 
 
@@ -24,9 +24,11 @@ Quartus Prime Version 16.0.1 Build 218 06/01/2016 SJ Lite Edition
  16. Report RSKM
  17. Unconstrained Paths Summary
  18. Clock Status Summary
- 19. Unconstrained Output Ports
+ 19. Unconstrained Input Ports
  20. Unconstrained Output Ports
- 21. TimeQuest Timing Analyzer Messages
+ 21. Unconstrained Input Ports
+ 22. Unconstrained Output Ports
+ 23. TimeQuest Timing Analyzer Messages
 
 
 
@@ -89,7 +91,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------+-----------------+------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
 +------------+-----------------+------------+------+
-; 110.41 MHz ; 110.41 MHz      ; OSC_CLK    ;      ;
+; 107.07 MHz ; 107.07 MHz      ; OSC_CLK    ;      ;
 +------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -99,7 +101,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------+--------+---------------+
 ; Clock   ; Slack  ; End Point TNS ;
 +---------+--------+---------------+
-; OSC_CLK ; -8.057 ; -407.415      ;
+; OSC_CLK ; -8.340 ; -1096.009     ;
 +---------+--------+---------------+
 
 
@@ -108,7 +110,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------+-------+---------------+
 ; Clock   ; Slack ; End Point TNS ;
 +---------+-------+---------------+
-; OSC_CLK ; 1.785 ; 0.000         ;
+; OSC_CLK ; 1.376 ; 0.000         ;
 +---------+-------+---------------+
 
 
@@ -133,220 +135,220 @@ No paths to report.
 +---------+--------+---------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'OSC_CLK'                                                                                                                                                         ;
-+--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
-; -8.057 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[22] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.724      ;
-; -8.057 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[23] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.724      ;
-; -8.057 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[17] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.724      ;
-; -8.057 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[18] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.724      ;
-; -8.057 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[19] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.724      ;
-; -8.057 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[20] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.724      ;
-; -8.057 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[21] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.724      ;
-; -8.048 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[16] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.715      ;
-; -8.048 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[15] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.715      ;
-; -8.048 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[10] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.715      ;
-; -8.048 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[11] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.715      ;
-; -8.048 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[12] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.715      ;
-; -8.048 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[13] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.715      ;
-; -8.048 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[7]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.715      ;
-; -8.048 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[8]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.715      ;
-; -8.048 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[9]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.715      ;
-; -8.048 ; ClockPrescaler:inst31|prescaler_counter[5]  ; ClockPrescaler:inst31|prescaler_counter[14] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.715      ;
-; -7.936 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[22] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.603      ;
-; -7.936 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[23] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.603      ;
-; -7.936 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[17] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.603      ;
-; -7.936 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[18] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.603      ;
-; -7.936 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[19] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.603      ;
-; -7.936 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[20] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.603      ;
-; -7.936 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[21] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.603      ;
-; -7.927 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[16] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.594      ;
-; -7.927 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[15] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.594      ;
-; -7.927 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[10] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.594      ;
-; -7.927 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[11] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.594      ;
-; -7.927 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[12] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.594      ;
-; -7.927 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[13] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.594      ;
-; -7.927 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[7]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.594      ;
-; -7.927 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[8]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.594      ;
-; -7.927 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[9]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.594      ;
-; -7.927 ; ClockPrescaler:inst31|prescaler_counter[4]  ; ClockPrescaler:inst31|prescaler_counter[14] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.594      ;
-; -7.861 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[22] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.528      ;
-; -7.861 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[23] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.528      ;
-; -7.861 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[17] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.528      ;
-; -7.861 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[18] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.528      ;
-; -7.861 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[19] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.528      ;
-; -7.861 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[20] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.528      ;
-; -7.861 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[21] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.528      ;
-; -7.855 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[22] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.522      ;
-; -7.855 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[23] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.522      ;
-; -7.855 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[17] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.522      ;
-; -7.855 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[18] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.522      ;
-; -7.855 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[19] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.522      ;
-; -7.855 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[20] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.522      ;
-; -7.855 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[21] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.522      ;
-; -7.852 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[16] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.519      ;
-; -7.852 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[15] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.519      ;
-; -7.852 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[10] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.519      ;
-; -7.852 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[11] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.519      ;
-; -7.852 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[12] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.519      ;
-; -7.852 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[13] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.519      ;
-; -7.852 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[7]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.519      ;
-; -7.852 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[8]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.519      ;
-; -7.852 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[9]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.519      ;
-; -7.852 ; ClockPrescaler:inst31|prescaler_counter[2]  ; ClockPrescaler:inst31|prescaler_counter[14] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.519      ;
-; -7.846 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[16] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.513      ;
-; -7.846 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[15] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.513      ;
-; -7.846 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[10] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.513      ;
-; -7.846 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[11] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.513      ;
-; -7.846 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[12] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.513      ;
-; -7.846 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[13] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.513      ;
-; -7.846 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[7]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.513      ;
-; -7.846 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[8]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.513      ;
-; -7.846 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[9]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.513      ;
-; -7.846 ; ClockPrescaler:inst31|prescaler_counter[9]  ; ClockPrescaler:inst31|prescaler_counter[14] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.513      ;
-; -7.779 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[22] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.446      ;
-; -7.779 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[23] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.446      ;
-; -7.779 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[17] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.446      ;
-; -7.779 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[18] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.446      ;
-; -7.779 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[19] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.446      ;
-; -7.779 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[20] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.446      ;
-; -7.779 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[21] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.446      ;
-; -7.770 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[16] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.437      ;
-; -7.770 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[15] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.437      ;
-; -7.770 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[10] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.437      ;
-; -7.770 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[11] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.437      ;
-; -7.770 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[12] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.437      ;
-; -7.770 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[13] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.437      ;
-; -7.770 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[7]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.437      ;
-; -7.770 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[8]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.437      ;
-; -7.770 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[9]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.437      ;
-; -7.770 ; ClockPrescaler:inst31|prescaler_counter[6]  ; ClockPrescaler:inst31|prescaler_counter[14] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.437      ;
-; -7.748 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[22] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.415      ;
-; -7.748 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[23] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.415      ;
-; -7.748 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[17] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.415      ;
-; -7.748 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[18] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.415      ;
-; -7.748 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[19] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.415      ;
-; -7.748 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[20] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.415      ;
-; -7.748 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[21] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.415      ;
-; -7.739 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[16] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.406      ;
-; -7.739 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[15] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.406      ;
-; -7.739 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[10] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.406      ;
-; -7.739 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[11] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.406      ;
-; -7.739 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[12] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.406      ;
-; -7.739 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[13] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.406      ;
-; -7.739 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[7]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.406      ;
-; -7.739 ; ClockPrescaler:inst31|prescaler_counter[20] ; ClockPrescaler:inst31|prescaler_counter[8]  ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.406      ;
-+--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'OSC_CLK'                                                                                                                                                                                                                                                                       ;
++--------+----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                                          ; To Node                                                                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -8.340 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_bpe:auto_generated|safe_q[2] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:output_buffer|dffs[4]                         ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 9.007      ;
+; -8.161 ; PushButton_Debouncer:inst8|PB_state                                                                ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[1]|dffs[0]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.828      ;
+; -8.161 ; PushButton_Debouncer:inst8|PB_state                                                                ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[0]|dffs[0]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.828      ;
+; -8.161 ; PushButton_Debouncer:inst8|PB_state                                                                ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[2]|dffs[0]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.828      ;
+; -8.161 ; PushButton_Debouncer:inst8|PB_state                                                                ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[1]|dffs[4]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.828      ;
+; -8.161 ; PushButton_Debouncer:inst8|PB_state                                                                ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[0]|dffs[4]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.828      ;
+; -8.161 ; PushButton_Debouncer:inst8|PB_state                                                                ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[2]|dffs[4]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.828      ;
+; -8.149 ; PushButton_Debouncer:inst8|PB_state                                                                ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][12]|dffs[0]                      ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.816      ;
+; -8.149 ; PushButton_Debouncer:inst8|PB_state                                                                ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][11]|dffs[0]                      ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.816      ;
+; -8.149 ; PushButton_Debouncer:inst8|PB_state                                                                ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][8]|dffs[0]                       ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.816      ;
+; -8.149 ; PushButton_Debouncer:inst8|PB_state                                                                ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][10]|dffs[0]                      ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.816      ;
+; -8.149 ; PushButton_Debouncer:inst8|PB_state                                                                ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][9]|dffs[0]                       ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.816      ;
+; -8.149 ; PushButton_Debouncer:inst8|PB_state                                                                ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][12]|dffs[4]                      ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.816      ;
+; -8.149 ; PushButton_Debouncer:inst8|PB_state                                                                ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][11]|dffs[4]                      ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.816      ;
+; -8.149 ; PushButton_Debouncer:inst8|PB_state                                                                ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][8]|dffs[4]                       ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.816      ;
+; -8.149 ; PushButton_Debouncer:inst8|PB_state                                                                ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][9]|dffs[4]                       ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.816      ;
+; -8.134 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_bpe:auto_generated|safe_q[0] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:output_buffer|dffs[4]                         ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.801      ;
+; -8.120 ; PushButton_Debouncer:inst8|PB_state                                                                ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[1]|dffs[2]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.787      ;
+; -8.120 ; PushButton_Debouncer:inst8|PB_state                                                                ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[2]|dffs[2]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.787      ;
+; -8.093 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_bpe:auto_generated|safe_q[0] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:output_buffer|dffs[0]                         ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.760      ;
+; -8.074 ; PushButton_Debouncer:inst7|PB_cnt[2]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[1]|dffs[0]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.741      ;
+; -8.074 ; PushButton_Debouncer:inst7|PB_cnt[2]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[0]|dffs[0]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.741      ;
+; -8.074 ; PushButton_Debouncer:inst7|PB_cnt[2]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[2]|dffs[0]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.741      ;
+; -8.074 ; PushButton_Debouncer:inst7|PB_cnt[2]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[1]|dffs[4]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.741      ;
+; -8.074 ; PushButton_Debouncer:inst7|PB_cnt[2]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[0]|dffs[4]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.741      ;
+; -8.074 ; PushButton_Debouncer:inst7|PB_cnt[2]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[2]|dffs[4]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.741      ;
+; -8.069 ; PushButton_Debouncer:inst8|PB_state                                                                ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_bpe:auto_generated|safe_q[4] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.736      ;
+; -8.069 ; PushButton_Debouncer:inst8|PB_state                                                                ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_bpe:auto_generated|safe_q[0] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.736      ;
+; -8.069 ; PushButton_Debouncer:inst8|PB_state                                                                ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_bpe:auto_generated|safe_q[2] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.736      ;
+; -8.069 ; PushButton_Debouncer:inst8|PB_state                                                                ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_bpe:auto_generated|safe_q[3] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.736      ;
+; -8.069 ; PushButton_Debouncer:inst8|PB_state                                                                ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_bpe:auto_generated|safe_q[1] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.736      ;
+; -8.062 ; PushButton_Debouncer:inst7|PB_cnt[2]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][12]|dffs[0]                      ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.729      ;
+; -8.062 ; PushButton_Debouncer:inst7|PB_cnt[2]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][11]|dffs[0]                      ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.729      ;
+; -8.062 ; PushButton_Debouncer:inst7|PB_cnt[2]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][8]|dffs[0]                       ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.729      ;
+; -8.062 ; PushButton_Debouncer:inst7|PB_cnt[2]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][10]|dffs[0]                      ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.729      ;
+; -8.062 ; PushButton_Debouncer:inst7|PB_cnt[2]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][9]|dffs[0]                       ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.729      ;
+; -8.062 ; PushButton_Debouncer:inst7|PB_cnt[2]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][12]|dffs[4]                      ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.729      ;
+; -8.062 ; PushButton_Debouncer:inst7|PB_cnt[2]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][11]|dffs[4]                      ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.729      ;
+; -8.062 ; PushButton_Debouncer:inst7|PB_cnt[2]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][8]|dffs[4]                       ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.729      ;
+; -8.062 ; PushButton_Debouncer:inst7|PB_cnt[2]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][9]|dffs[4]                       ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.729      ;
+; -8.033 ; PushButton_Debouncer:inst7|PB_cnt[2]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[1]|dffs[2]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.700      ;
+; -8.033 ; PushButton_Debouncer:inst7|PB_cnt[2]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[2]|dffs[2]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.700      ;
+; -7.982 ; PushButton_Debouncer:inst7|PB_cnt[2]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_bpe:auto_generated|safe_q[4] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.649      ;
+; -7.982 ; PushButton_Debouncer:inst7|PB_cnt[2]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_bpe:auto_generated|safe_q[0] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.649      ;
+; -7.982 ; PushButton_Debouncer:inst7|PB_cnt[2]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_bpe:auto_generated|safe_q[2] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.649      ;
+; -7.982 ; PushButton_Debouncer:inst7|PB_cnt[2]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_bpe:auto_generated|safe_q[3] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.649      ;
+; -7.982 ; PushButton_Debouncer:inst7|PB_cnt[2]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_bpe:auto_generated|safe_q[1] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.649      ;
+; -7.979 ; PushButton_Debouncer:inst3|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[1]|dffs[0]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.646      ;
+; -7.979 ; PushButton_Debouncer:inst3|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[0]|dffs[0]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.646      ;
+; -7.979 ; PushButton_Debouncer:inst3|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[2]|dffs[0]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.646      ;
+; -7.979 ; PushButton_Debouncer:inst3|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[1]|dffs[4]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.646      ;
+; -7.979 ; PushButton_Debouncer:inst3|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[0]|dffs[4]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.646      ;
+; -7.979 ; PushButton_Debouncer:inst3|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[2]|dffs[4]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.646      ;
+; -7.967 ; PushButton_Debouncer:inst3|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][12]|dffs[0]                      ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.634      ;
+; -7.967 ; PushButton_Debouncer:inst3|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][11]|dffs[0]                      ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.634      ;
+; -7.967 ; PushButton_Debouncer:inst3|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][8]|dffs[0]                       ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.634      ;
+; -7.967 ; PushButton_Debouncer:inst3|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][10]|dffs[0]                      ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.634      ;
+; -7.967 ; PushButton_Debouncer:inst3|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][9]|dffs[0]                       ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.634      ;
+; -7.967 ; PushButton_Debouncer:inst3|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][12]|dffs[4]                      ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.634      ;
+; -7.967 ; PushButton_Debouncer:inst3|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][11]|dffs[4]                      ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.634      ;
+; -7.967 ; PushButton_Debouncer:inst3|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][8]|dffs[4]                       ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.634      ;
+; -7.967 ; PushButton_Debouncer:inst3|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][9]|dffs[4]                       ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.634      ;
+; -7.959 ; PushButton_Debouncer:inst8|PB_cnt[0]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[1]|dffs[0]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.626      ;
+; -7.959 ; PushButton_Debouncer:inst8|PB_cnt[0]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[0]|dffs[0]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.626      ;
+; -7.959 ; PushButton_Debouncer:inst8|PB_cnt[0]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[2]|dffs[0]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.626      ;
+; -7.959 ; PushButton_Debouncer:inst8|PB_cnt[0]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[1]|dffs[4]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.626      ;
+; -7.959 ; PushButton_Debouncer:inst8|PB_cnt[0]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[0]|dffs[4]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.626      ;
+; -7.959 ; PushButton_Debouncer:inst8|PB_cnt[0]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[2]|dffs[4]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.626      ;
+; -7.947 ; PushButton_Debouncer:inst8|PB_cnt[0]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][12]|dffs[0]                      ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.614      ;
+; -7.947 ; PushButton_Debouncer:inst8|PB_cnt[0]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][11]|dffs[0]                      ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.614      ;
+; -7.947 ; PushButton_Debouncer:inst8|PB_cnt[0]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][8]|dffs[0]                       ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.614      ;
+; -7.947 ; PushButton_Debouncer:inst8|PB_cnt[0]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][10]|dffs[0]                      ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.614      ;
+; -7.947 ; PushButton_Debouncer:inst8|PB_cnt[0]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][9]|dffs[0]                       ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.614      ;
+; -7.947 ; PushButton_Debouncer:inst8|PB_cnt[0]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][12]|dffs[4]                      ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.614      ;
+; -7.947 ; PushButton_Debouncer:inst8|PB_cnt[0]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][11]|dffs[4]                      ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.614      ;
+; -7.947 ; PushButton_Debouncer:inst8|PB_cnt[0]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][8]|dffs[4]                       ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.614      ;
+; -7.947 ; PushButton_Debouncer:inst8|PB_cnt[0]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][9]|dffs[4]                       ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.614      ;
+; -7.938 ; PushButton_Debouncer:inst3|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[1]|dffs[2]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.605      ;
+; -7.938 ; PushButton_Debouncer:inst3|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[2]|dffs[2]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.605      ;
+; -7.918 ; PushButton_Debouncer:inst8|PB_cnt[0]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[1]|dffs[2]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.585      ;
+; -7.918 ; PushButton_Debouncer:inst8|PB_cnt[0]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[2]|dffs[2]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.585      ;
+; -7.891 ; PushButton_Debouncer:inst3|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_bpe:auto_generated|safe_q[4] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.558      ;
+; -7.891 ; PushButton_Debouncer:inst3|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_bpe:auto_generated|safe_q[0] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.558      ;
+; -7.891 ; PushButton_Debouncer:inst3|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_bpe:auto_generated|safe_q[2] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.558      ;
+; -7.891 ; PushButton_Debouncer:inst3|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_bpe:auto_generated|safe_q[3] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.558      ;
+; -7.891 ; PushButton_Debouncer:inst3|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_bpe:auto_generated|safe_q[1] ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.558      ;
+; -7.882 ; PushButton_Debouncer:inst7|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[1]|dffs[0]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.549      ;
+; -7.882 ; PushButton_Debouncer:inst7|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[0]|dffs[0]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.549      ;
+; -7.882 ; PushButton_Debouncer:inst7|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[2]|dffs[0]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.549      ;
+; -7.882 ; PushButton_Debouncer:inst7|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[1]|dffs[4]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.549      ;
+; -7.882 ; PushButton_Debouncer:inst7|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[0]|dffs[4]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.549      ;
+; -7.882 ; PushButton_Debouncer:inst7|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[2]|dffs[4]                     ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.549      ;
+; -7.870 ; PushButton_Debouncer:inst7|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][12]|dffs[0]                      ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.537      ;
+; -7.870 ; PushButton_Debouncer:inst7|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][11]|dffs[0]                      ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.537      ;
+; -7.870 ; PushButton_Debouncer:inst7|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][8]|dffs[0]                       ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.537      ;
+; -7.870 ; PushButton_Debouncer:inst7|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][10]|dffs[0]                      ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.537      ;
+; -7.870 ; PushButton_Debouncer:inst7|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][9]|dffs[0]                       ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.537      ;
+; -7.870 ; PushButton_Debouncer:inst7|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][12]|dffs[4]                      ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.537      ;
+; -7.870 ; PushButton_Debouncer:inst7|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][11]|dffs[4]                      ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.537      ;
+; -7.870 ; PushButton_Debouncer:inst7|PB_cnt[1]                                                               ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][8]|dffs[4]                       ; OSC_CLK      ; OSC_CLK     ; 1.000        ; 0.000      ; 8.537      ;
++--------+----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'OSC_CLK'                                                                                                                                                                                                                                                                       ;
-+-------+----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node                                                                                          ; To Node                                                                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; 1.785 ; async_transmitter:ewrq|TxD_state[1]                                                                ; async_transmitter:ewrq|TxD_state[3]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.006      ;
-; 1.928 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|state_empty                      ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|state_empty                      ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.149      ;
-; 1.944 ; async_transmitter:ewrq|TxD_shift[5]                                                                ; async_transmitter:ewrq|TxD_shift[4]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.165      ;
-; 1.989 ; async_transmitter:ewrq|TxD_state[0]                                                                ; async_transmitter:ewrq|TxD_state[3]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.210      ;
-; 2.034 ; async_transmitter:ewrq|TxD_state[3]                                                                ; async_transmitter:ewrq|TxD_state[1]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.255      ;
-; 2.037 ; async_transmitter:ewrq|TxD_state[3]                                                                ; async_transmitter:ewrq|TxD_state[2]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.258      ;
-; 2.060 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[5] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[5] ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.281      ;
-; 2.107 ; ClockPrescaler:inst31|prescaler_counter[6]                                                         ; ClockPrescaler:inst31|prescaler_counter[6]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.328      ;
-; 2.108 ; ClockPrescaler:inst31|prescaler_counter[4]                                                         ; ClockPrescaler:inst31|prescaler_counter[4]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.329      ;
-; 2.108 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[6]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[6]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.329      ;
-; 2.116 ; ClockPrescaler:inst31|prescaler_counter[7]                                                         ; ClockPrescaler:inst31|prescaler_counter[7]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.337      ;
-; 2.116 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[9]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[9]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.337      ;
-; 2.117 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[16]                                                 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[16]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.338      ;
-; 2.117 ; ClockPrescaler:inst31|prescaler_counter[14]                                                        ; ClockPrescaler:inst31|prescaler_counter[14]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.338      ;
-; 2.117 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[11]                                                 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[11]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.338      ;
-; 2.117 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[10]                                                 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[10]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.338      ;
-; 2.117 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[8]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[8]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.338      ;
-; 2.117 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[1]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[1]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.338      ;
-; 2.126 ; ClockPrescaler:inst31|prescaler_counter[16]                                                        ; ClockPrescaler:inst31|prescaler_counter[16]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.347      ;
-; 2.126 ; ClockPrescaler:inst31|prescaler_counter[8]                                                         ; ClockPrescaler:inst31|prescaler_counter[8]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.347      ;
-; 2.126 ; ClockPrescaler:inst31|prescaler_counter[9]                                                         ; ClockPrescaler:inst31|prescaler_counter[9]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.347      ;
-; 2.127 ; async_transmitter:ewrq|TxD_shift[2]                                                                ; async_transmitter:ewrq|TxD_shift[1]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.348      ;
-; 2.131 ; async_transmitter:ewrq|TxD_shift[1]                                                                ; async_transmitter:ewrq|TxD_shift[0]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.352      ;
-; 2.136 ; ClockPrescaler:inst31|prescaler_counter[19]                                                        ; ClockPrescaler:inst31|prescaler_counter[19]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.357      ;
-; 2.212 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[12]                                                 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[12]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.433      ;
-; 2.216 ; async_transmitter:ewrq|TxD_shift[3]                                                                ; async_transmitter:ewrq|TxD_shift[2]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.437      ;
-; 2.221 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[2] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[2] ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.442      ;
-; 2.221 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[4] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[4] ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.442      ;
-; 2.221 ; ClockPrescaler:inst31|prescaler_counter[15]                                                        ; ClockPrescaler:inst31|prescaler_counter[15]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.442      ;
-; 2.221 ; ClockPrescaler:inst31|prescaler_counter[10]                                                        ; ClockPrescaler:inst31|prescaler_counter[10]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.442      ;
-; 2.221 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[7]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[7]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.442      ;
-; 2.221 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[2]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[2]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.442      ;
-; 2.222 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[3] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[3] ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.443      ;
-; 2.230 ; ClockPrescaler:inst31|prescaler_counter[12]                                                        ; ClockPrescaler:inst31|prescaler_counter[12]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.451      ;
-; 2.230 ; ClockPrescaler:inst31|prescaler_counter[5]                                                         ; ClockPrescaler:inst31|prescaler_counter[5]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.451      ;
-; 2.230 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[14]                                                 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[14]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.451      ;
-; 2.230 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[4]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[4]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.451      ;
-; 2.231 ; ClockPrescaler:inst31|prescaler_counter[11]                                                        ; ClockPrescaler:inst31|prescaler_counter[11]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.452      ;
-; 2.231 ; ClockPrescaler:inst31|prescaler_counter[13]                                                        ; ClockPrescaler:inst31|prescaler_counter[13]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.452      ;
-; 2.231 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[15]                                                 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[15]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.452      ;
-; 2.231 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[13]                                                 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[13]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.452      ;
-; 2.231 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[5]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[5]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.452      ;
-; 2.231 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[3]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[3]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.452      ;
-; 2.233 ; ClockPrescaler:inst31|prescaler_counter[20]                                                        ; ClockPrescaler:inst31|prescaler_counter[20]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.454      ;
-; 2.235 ; async_transmitter:ewrq|TxD_state[3]                                                                ; async_transmitter:ewrq|TxD_state[3]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.456      ;
-; 2.242 ; ClockPrescaler:inst31|prescaler_counter[0]                                                         ; ClockPrescaler:inst31|prescaler_counter[0]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.463      ;
-; 2.244 ; async_transmitter:ewrq|TxD_state[1]                                                                ; async_transmitter:ewrq|TxD_state[1]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.465      ;
-; 2.244 ; async_transmitter:ewrq|TxD_shift[4]                                                                ; async_transmitter:ewrq|TxD_shift[3]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.465      ;
-; 2.248 ; ClockPrescaler:inst31|prescaler_counter[22]                                                        ; ClockPrescaler:inst31|prescaler_counter[22]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.469      ;
-; 2.248 ; ClockPrescaler:inst31|prescaler_counter[3]                                                         ; ClockPrescaler:inst31|prescaler_counter[3]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.469      ;
-; 2.260 ; ClockPrescaler:inst31|prescaler_counter[2]                                                         ; ClockPrescaler:inst31|prescaler_counter[2]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.481      ;
-; 2.260 ; ClockPrescaler:inst31|prescaler_counter[23]                                                        ; ClockPrescaler:inst31|prescaler_counter[23]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.481      ;
-; 2.261 ; async_transmitter:ewrq|TxD_state[3]                                                                ; async_transmitter:ewrq|TxD_state[0]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.482      ;
-; 2.261 ; ClockPrescaler:inst31|prescaler_counter[1]                                                         ; ClockPrescaler:inst31|prescaler_counter[1]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.482      ;
-; 2.262 ; ClockPrescaler:inst31|prescaler_counter[21]                                                        ; ClockPrescaler:inst31|prescaler_counter[21]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.483      ;
-; 2.278 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|state_middle                     ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|state_full                       ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.499      ;
-; 2.283 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|state_middle                     ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|state_empty                      ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.504      ;
-; 2.293 ; async_transmitter:ewrq|TxD_state[0]                                                                ; async_transmitter:ewrq|TxD_state[0]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.514      ;
-; 2.500 ; ClockPrescaler:inst31|prescaler_counter[18]                                                        ; ClockPrescaler:inst31|prescaler_counter[18]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.721      ;
-; 2.508 ; ClockPrescaler:inst31|prescaler_counter[17]                                                        ; ClockPrescaler:inst31|prescaler_counter[17]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.729      ;
-; 2.543 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|state_full                       ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|state_full                       ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.764      ;
-; 2.605 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[1] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[1] ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.826      ;
-; 2.802 ; comparator:inst|data_buffer[0]                                                                     ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|state_full                       ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.023      ;
-; 2.807 ; async_transmitter:ewrq|TxD_state[1]                                                                ; async_transmitter:ewrq|TxD_state[2]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.028      ;
-; 2.940 ; ClockPrescaler:inst31|prescaler_counter[4]                                                         ; ClockPrescaler:inst31|prescaler_counter[5]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.161      ;
-; 2.940 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[6]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[7]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.161      ;
-; 2.943 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[4] ; async_transmitter:ewrq|TxD_shift[4]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.164      ;
-; 2.948 ; ClockPrescaler:inst31|prescaler_counter[7]                                                         ; ClockPrescaler:inst31|prescaler_counter[8]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.169      ;
-; 2.948 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[9]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[10]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.169      ;
-; 2.949 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[16]                                                 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[17]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.170      ;
-; 2.949 ; ClockPrescaler:inst31|prescaler_counter[14]                                                        ; ClockPrescaler:inst31|prescaler_counter[15]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.170      ;
-; 2.949 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[11]                                                 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[12]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.170      ;
-; 2.949 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[10]                                                 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[11]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.170      ;
-; 2.949 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[1]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[2]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.170      ;
-; 2.958 ; ClockPrescaler:inst31|prescaler_counter[9]                                                         ; ClockPrescaler:inst31|prescaler_counter[10]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.179      ;
-; 2.958 ; ClockPrescaler:inst31|prescaler_counter[8]                                                         ; ClockPrescaler:inst31|prescaler_counter[9]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.179      ;
-; 2.968 ; ClockPrescaler:inst31|prescaler_counter[19]                                                        ; ClockPrescaler:inst31|prescaler_counter[20]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.189      ;
-; 2.980 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|state_empty                      ; async_transmitter:ewrq|TxD_shift[2]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.201      ;
-; 2.998 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|state_empty                      ; async_transmitter:ewrq|TxD_shift[3]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.219      ;
-; 3.005 ; async_transmitter:ewrq|TxD_state[2]                                                                ; async_transmitter:ewrq|TxD_state[0]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.226      ;
-; 3.051 ; ClockPrescaler:inst31|prescaler_counter[4]                                                         ; ClockPrescaler:inst31|prescaler_counter[6]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.272      ;
-; 3.051 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[6]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[8]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.272      ;
-; 3.059 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[9]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[11]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.280      ;
-; 3.059 ; ClockPrescaler:inst31|prescaler_counter[7]                                                         ; ClockPrescaler:inst31|prescaler_counter[9]                                                         ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.280      ;
-; 3.060 ; ClockPrescaler:inst31|prescaler_counter[14]                                                        ; ClockPrescaler:inst31|prescaler_counter[16]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.281      ;
-; 3.060 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[11]                                                 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[13]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.281      ;
-; 3.060 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[1]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[3]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.281      ;
-; 3.060 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[10]                                                 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[12]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.281      ;
-; 3.069 ; ClockPrescaler:inst31|prescaler_counter[9]                                                         ; ClockPrescaler:inst31|prescaler_counter[11]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.290      ;
-; 3.069 ; ClockPrescaler:inst31|prescaler_counter[8]                                                         ; ClockPrescaler:inst31|prescaler_counter[10]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.290      ;
-; 3.079 ; ClockPrescaler:inst31|prescaler_counter[19]                                                        ; ClockPrescaler:inst31|prescaler_counter[21]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.300      ;
-; 3.107 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[1] ; async_transmitter:ewrq|TxD_shift[1]                                                                ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.328      ;
-; 3.110 ; ClockPrescaler:inst31|prescaler_counter[23]                                                        ; ClockPrescaler:inst31|newClock                                                                     ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.331      ;
-; 3.152 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[12]                                                 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[13]                                                 ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.373      ;
-; 3.161 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[2] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[3] ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.382      ;
-; 3.161 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[4] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated|safe_q[5] ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.382      ;
-; 3.161 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[7]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[8]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.382      ;
-; 3.161 ; ClockPrescaler:inst31|prescaler_counter[15]                                                        ; ClockPrescaler:inst31|prescaler_counter[16]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.382      ;
-; 3.161 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[2]                                                  ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[3]                                                  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.382      ;
-; 3.161 ; ClockPrescaler:inst31|prescaler_counter[10]                                                        ; ClockPrescaler:inst31|prescaler_counter[11]                                                        ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 3.382      ;
-+-------+----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'OSC_CLK'                                                                                                                                                                                                                               ;
++-------+--------------------------------------------------------------------------------+--------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                      ; To Node                                                                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------------------------------------+--------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.376 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][5]|dffs[2]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][6]|dffs[2]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.597      ;
+; 1.377 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][10]|dffs[0]  ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][11]|dffs[0]  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.598      ;
+; 1.379 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][12]|dffs[5]  ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][13]|dffs[5]  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.600      ;
+; 1.385 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][14]|dffs[3]  ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][15]|dffs[3]  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.606      ;
+; 1.386 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][5]|dffs[3]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][6]|dffs[3]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.607      ;
+; 1.386 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][5]|dffs[5]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][6]|dffs[5]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.607      ;
+; 1.387 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[0]|dffs[0] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[1]|dffs[0] ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.608      ;
+; 1.388 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][3]|dffs[0]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][4]|dffs[0]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.609      ;
+; 1.389 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][10]|dffs[1]  ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][11]|dffs[1]  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.610      ;
+; 1.391 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][11]|dffs[1]  ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][12]|dffs[1]  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.612      ;
+; 1.395 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][10]|dffs[5]  ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][11]|dffs[5]  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.616      ;
+; 1.396 ; PushButton_Debouncer:inst3|PB_sync_0                                           ; PushButton_Debouncer:inst3|PB_sync_1                                           ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.617      ;
+; 1.396 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][4]|dffs[0]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][5]|dffs[0]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.617      ;
+; 1.397 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][3]|dffs[4]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][4]|dffs[4]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.618      ;
+; 1.399 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][2]|dffs[4]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][3]|dffs[4]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.620      ;
+; 1.400 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][6]|dffs[4]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][7]|dffs[4]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.621      ;
+; 1.401 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[0]|dffs[3] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[1]|dffs[3] ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.622      ;
+; 1.403 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[1]|dffs[3] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[2]|dffs[3] ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.624      ;
+; 1.404 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][8]|dffs[0]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][9]|dffs[0]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.625      ;
+; 1.404 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][3]|dffs[2]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][4]|dffs[2]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.625      ;
+; 1.407 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][12]|dffs[3]  ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][13]|dffs[3]  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.628      ;
+; 1.411 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[1]|dffs[4] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[2]|dffs[4] ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.632      ;
+; 1.414 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][7]|dffs[2]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][8]|dffs[2]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.635      ;
+; 1.640 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[1]|dffs[2] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[2]|dffs[2] ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.861      ;
+; 1.644 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[1]|dffs[1] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[2]|dffs[1] ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.865      ;
+; 1.644 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][8]|dffs[4]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][9]|dffs[4]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.865      ;
+; 1.646 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[0]|dffs[0] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:output_buffer|dffs[0]     ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.867      ;
+; 1.646 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[0]|dffs[2] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:output_buffer|dffs[2]     ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.867      ;
+; 1.646 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[0]|dffs[4] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:output_buffer|dffs[4]     ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.867      ;
+; 1.655 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][6]|dffs[0]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][7]|dffs[0]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.876      ;
+; 1.656 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][6]|dffs[2]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][7]|dffs[2]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.877      ;
+; 1.661 ; PushButton_Debouncer:inst3|PB_cnt[2]                                           ; PushButton_Debouncer:inst3|PB_cnt[2]                                           ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.882      ;
+; 1.661 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][11]|dffs[3]  ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][12]|dffs[3]  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.882      ;
+; 1.664 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][6]|dffs[5]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][7]|dffs[5]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.885      ;
+; 1.666 ; async_transmitter:ewrq|TxD_shift[2]                                            ; async_transmitter:ewrq|TxD_shift[1]                                            ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.887      ;
+; 1.666 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[0]|dffs[4] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[1]|dffs[4] ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.887      ;
+; 1.670 ; PushButton_Debouncer:inst3|PB_state                                            ; PushButton_Debouncer:inst3|PB_state                                            ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.891      ;
+; 1.671 ; async_transmitter:ewrq|TxD_shift[5]                                            ; async_transmitter:ewrq|TxD_shift[4]                                            ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.892      ;
+; 1.673 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[1]|dffs[0] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[2]|dffs[0] ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.894      ;
+; 1.677 ; PushButton_Debouncer:inst7|PB_state                                            ; PushButton_Debouncer:inst7|PB_state                                            ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.898      ;
+; 1.677 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][7]|dffs[5]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][8]|dffs[5]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.898      ;
+; 1.685 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][11]|dffs[2]  ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][12]|dffs[2]  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.906      ;
+; 1.691 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][12]|dffs[1]  ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][13]|dffs[1]  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.912      ;
+; 1.692 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][8]|dffs[1]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][9]|dffs[1]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.913      ;
+; 1.696 ; PushButton_Debouncer:inst7|PB_cnt[0]                                           ; PushButton_Debouncer:inst7|PB_cnt[0]                                           ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.917      ;
+; 1.698 ; PushButton_Debouncer:inst7|PB_cnt[0]                                           ; PushButton_Debouncer:inst7|PB_cnt[2]                                           ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.919      ;
+; 1.705 ; PushButton_Debouncer:inst7|PB_cnt[0]                                           ; PushButton_Debouncer:inst7|PB_cnt[1]                                           ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.926      ;
+; 1.709 ; PushButton_Debouncer:inst8|PB_cnt[1]                                           ; PushButton_Debouncer:inst8|PB_cnt[2]                                           ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.930      ;
+; 1.770 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][11]|dffs[5]  ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][12]|dffs[5]  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.991      ;
+; 1.776 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][2]|dffs[2]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][3]|dffs[2]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.997      ;
+; 1.776 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][10]|dffs[4]  ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][11]|dffs[4]  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 1.997      ;
+; 1.781 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][2]|dffs[0]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][3]|dffs[0]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.002      ;
+; 1.781 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][15]|dffs[2]  ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[0]|dffs[2] ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.002      ;
+; 1.782 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][15]|dffs[4]  ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[0]|dffs[4] ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.003      ;
+; 1.783 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][8]|dffs[5]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][9]|dffs[5]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.004      ;
+; 1.788 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][5]|dffs[4]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][6]|dffs[4]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.009      ;
+; 1.788 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][15]|dffs[5]  ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[0]|dffs[5] ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.009      ;
+; 1.796 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][4]|dffs[2]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][5]|dffs[2]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.017      ;
+; 1.800 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][9]|dffs[3]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][10]|dffs[3]  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.021      ;
+; 1.800 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][0]|dffs[4]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][2]|dffs[4]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.021      ;
+; 1.800 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][11]|dffs[4]  ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][12]|dffs[4]  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.021      ;
+; 1.801 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][5]|dffs[0]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][6]|dffs[0]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.022      ;
+; 1.803 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][10]|dffs[2]  ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][11]|dffs[2]  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.024      ;
+; 1.803 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][0]|dffs[3]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][2]|dffs[3]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.024      ;
+; 1.805 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[0]|dffs[1] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[1]|dffs[1] ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.026      ;
+; 1.807 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][6]|dffs[3]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][7]|dffs[3]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.028      ;
+; 1.810 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][2]|dffs[3]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][3]|dffs[3]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.031      ;
+; 1.813 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][0]|dffs[0]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][2]|dffs[0]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.034      ;
+; 1.817 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][13]|dffs[0]  ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][14]|dffs[0]  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.038      ;
+; 1.820 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][0]|dffs[2]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][2]|dffs[2]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.041      ;
+; 1.822 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][9]|dffs[0]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][10]|dffs[0]  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.043      ;
+; 1.823 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][13]|dffs[3]  ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][14]|dffs[3]  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.044      ;
+; 1.839 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][12]|dffs[4]  ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][13]|dffs[4]  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.060      ;
+; 1.865 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][9]|dffs[4]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][10]|dffs[4]  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.086      ;
+; 1.897 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][12]|dffs[0]  ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][13]|dffs[0]  ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.118      ;
+; 1.913 ; async_transmitter:ewrq|TxD_shift[1]                                            ; async_transmitter:ewrq|TxD_shift[0]                                            ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.134      ;
+; 1.916 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[2]|dffs[0] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:output_buffer|dffs[0]     ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.137      ;
+; 1.917 ; async_transmitter:ewrq|TxD_shift[4]                                            ; async_transmitter:ewrq|TxD_shift[3]                                            ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.138      ;
+; 1.918 ; PushButton_Debouncer:inst8|PB_state                                            ; PushButton_Debouncer:inst8|PB_state                                            ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.139      ;
+; 1.937 ; PushButton_Debouncer:inst7|PB_cnt[1]                                           ; PushButton_Debouncer:inst7|PB_cnt[2]                                           ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.158      ;
+; 1.937 ; PushButton_Debouncer:inst3|PB_cnt[1]                                           ; PushButton_Debouncer:inst3|PB_cnt[1]                                           ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.158      ;
+; 1.937 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[1]|dffs[4] ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:output_buffer|dffs[4]     ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.158      ;
+; 1.940 ; PushButton_Debouncer:inst3|PB_cnt[1]                                           ; PushButton_Debouncer:inst3|PB_cnt[2]                                           ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.161      ;
+; 1.956 ; PushButton_Debouncer:inst3|PB_cnt[0]                                           ; PushButton_Debouncer:inst3|PB_cnt[0]                                           ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.177      ;
+; 1.963 ; PushButton_Debouncer:inst8|PB_cnt[0]                                           ; PushButton_Debouncer:inst8|PB_cnt[0]                                           ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.184      ;
+; 1.965 ; PushButton_Debouncer:inst8|PB_cnt[0]                                           ; PushButton_Debouncer:inst8|PB_cnt[1]                                           ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.186      ;
+; 1.970 ; PushButton_Debouncer:inst8|PB_cnt[0]                                           ; PushButton_Debouncer:inst8|PB_cnt[2]                                           ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.191      ;
+; 2.036 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:output_buffer|dffs[0]     ; async_transmitter:ewrq|TxD_shift[0]                                            ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.257      ;
+; 2.036 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][7]|dffs[1]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][8]|dffs[1]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.257      ;
+; 2.045 ; async_transmitter:ewrq|TxD_state[0]                                            ; async_transmitter:ewrq|TxD_state[3]                                            ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.266      ;
+; 2.046 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][3]|dffs[5]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][4]|dffs[5]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.267      ;
+; 2.073 ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][8]|dffs[2]   ; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][9]|dffs[2]   ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.294      ;
+; 2.100 ; PushButton_Debouncer:inst3|PB_sync_1                                           ; PushButton_Debouncer:inst3|PB_cnt[1]                                           ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.321      ;
+; 2.101 ; PushButton_Debouncer:inst3|PB_sync_1                                           ; PushButton_Debouncer:inst3|PB_cnt[0]                                           ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.322      ;
+; 2.108 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[6]                              ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[6]                              ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.329      ;
+; 2.116 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[9]                              ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[9]                              ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.337      ;
+; 2.117 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[16]                             ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[16]                             ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[11]                             ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[11]                             ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[10]                             ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[10]                             ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[8]                              ; async_transmitter:ewrq|BaudTickGen:tickgen|Acc[8]                              ; OSC_CLK      ; OSC_CLK     ; 0.000        ; 0.000      ; 2.338      ;
++-------+--------------------------------------------------------------------------------+--------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
 +-------------------------------------------------------------------+
@@ -354,7 +356,7 @@ No paths to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; OSC_CLK    ; OSC_CLK  ; 1808     ; 0        ; 0        ; 0        ;
+; OSC_CLK    ; OSC_CLK  ; 3182     ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -364,7 +366,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; OSC_CLK    ; OSC_CLK  ; 1808     ; 0        ; 0        ; 0        ;
+; OSC_CLK    ; OSC_CLK  ; 3182     ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -388,8 +390,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 0     ; 0    ;
-; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 6     ; 6    ;
+; Unconstrained Input Port Paths  ; 9     ; 9    ;
 ; Unconstrained Output Ports      ; 4     ; 4    ;
 ; Unconstrained Output Port Paths ; 9     ; 9    ;
 +---------------------------------+-------+------+
@@ -404,6 +406,20 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------+---------+------+-------------+
 
 
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; dirs[0]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; dirs[1]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; dirs[2]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; steps[0]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; steps[1]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; steps[2]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------------------------------------------------------+
 ; Unconstrained Output Ports                                                                          ;
 +-------------+---------------------------------------------------------------------------------------+
@@ -414,6 +430,20 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; TX_OUTPUT   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; TxFree      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; dirs[0]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; dirs[1]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; dirs[2]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; steps[0]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; steps[1]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; steps[2]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -434,7 +464,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 16.0.1 Build 218 06/01/2016 SJ Lite Edition
-    Info: Processing started: Mon Jun 20 23:04:35 2016
+    Info: Processing started: Thu Jun 23 19:59:18 2016
 Info: Command: quartus_sta simple -c simple
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -449,14 +479,14 @@ Info (332105): Deriving Clocks
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -8.057
+Info (332146): Worst-case setup slack is -8.340
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.057            -407.415 OSC_CLK 
-Info (332146): Worst-case hold slack is 1.785
+    Info (332119):    -8.340           -1096.009 OSC_CLK 
+Info (332146): Worst-case hold slack is 1.376
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.785               0.000 OSC_CLK 
+    Info (332119):     1.376               0.000 OSC_CLK 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.289
@@ -467,9 +497,9 @@ Info (332001): The selected device family is not supported by the report_metasta
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 994 megabytes
-    Info: Processing ended: Mon Jun 20 23:04:35 2016
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 997 megabytes
+    Info: Processing ended: Thu Jun 23 19:59:20 2016
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

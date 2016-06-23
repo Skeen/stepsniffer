@@ -70,3 +70,5 @@ set_global_assignment -name VHDL_FILE padder.vhd
 set_location_assignment PIN_91 -to BufferEmpty
 set_location_assignment PIN_100 -to LoadPins
 set_global_assignment -name VHDL_FILE ClockPrescaler.vhd
+set_global_assignment -name VERILOG_FILE debouncer.v
+set_global_assignment -name VHDL_FILE single_pin.vhd

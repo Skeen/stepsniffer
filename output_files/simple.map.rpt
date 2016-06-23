@@ -1,5 +1,5 @@
 Analysis & Synthesis report for simple
-Mon Jun 20 23:04:30 2016
+Thu Jun 23 19:59:08 2016
 Quartus Prime Version 16.0.1 Build 218 06/01/2016 SJ Lite Edition
 
 
@@ -21,11 +21,13 @@ Quartus Prime Version 16.0.1 Build 218 06/01/2016 SJ Lite Edition
  13. Parameter Settings for User Entity Instance: async_transmitter:ewrq
  14. Parameter Settings for User Entity Instance: async_transmitter:ewrq|BaudTickGen:tickgen
  15. Parameter Settings for User Entity Instance: LPM_FIFO:inst6
- 16. Parameter Settings for User Entity Instance: comparator:inst
- 17. Parameter Settings for User Entity Instance: combiner:inst9
- 18. Parameter Settings for User Entity Instance: padder:inst11
- 19. Parameter Settings for User Entity Instance: comparator:inst2
- 20. Analysis & Synthesis Messages
+ 16. Parameter Settings for User Entity Instance: single_pin:inst16
+ 17. Parameter Settings for User Entity Instance: single_pin:inst14
+ 18. Parameter Settings for User Entity Instance: single_pin:inst10
+ 19. Parameter Settings for User Entity Instance: comparator:inst
+ 20. Parameter Settings for User Entity Instance: combiner:inst9
+ 21. Parameter Settings for User Entity Instance: padder:inst11
+ 22. Analysis & Synthesis Messages
 
 
 
@@ -52,12 +54,12 @@ agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon Jun 20 23:04:30 2016       ;
+; Analysis & Synthesis Status ; Successful - Thu Jun 23 19:59:08 2016       ;
 ; Quartus Prime Version       ; 16.0.1 Build 218 06/01/2016 SJ Lite Edition ;
 ; Revision Name               ; simple                                      ;
 ; Top-level Entity Name       ; simple                                      ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 92                                          ;
+; Total logic elements        ; 276                                         ;
 ; Total pins                  ; 11                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
@@ -157,7 +159,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Comparator.vhd                   ; yes             ; User VHDL File                     ; /home/skeen/stepsniffer/Comparator.vhd                                               ;         ;
 ; combiner.vhd                     ; yes             ; User VHDL File                     ; /home/skeen/stepsniffer/combiner.vhd                                                 ;         ;
 ; padder.vhd                       ; yes             ; User VHDL File                     ; /home/skeen/stepsniffer/padder.vhd                                                   ;         ;
-; ClockPrescaler.vhd               ; yes             ; User VHDL File                     ; /home/skeen/stepsniffer/ClockPrescaler.vhd                                           ;         ;
+; debouncer.v                      ; yes             ; User Verilog HDL File              ; /home/skeen/stepsniffer/debouncer.v                                                  ;         ;
+; single_pin.vhd                   ; yes             ; User VHDL File                     ; /home/skeen/stepsniffer/single_pin.vhd                                               ;         ;
 ; lpm_fifo.tdf                     ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_fifo.tdf            ;         ;
 ; scfifo.inc                       ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/scfifo.inc              ;         ;
 ; scfifo.tdf                       ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/scfifo.tdf              ;         ;
@@ -179,18 +182,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; muxlut.inc                       ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/muxlut.inc              ;         ;
 ; bypassff.inc                     ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/bypassff.inc            ;         ;
 ; altshift.inc                     ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/altshift.inc            ;         ;
-; db/mux_gbc.tdf                   ; yes             ; Auto-Generated Megafunction        ; /home/skeen/stepsniffer/db/mux_gbc.tdf                                               ;         ;
+; db/mux_bbc.tdf                   ; yes             ; Auto-Generated Megafunction        ; /home/skeen/stepsniffer/db/mux_bbc.tdf                                               ;         ;
+; db/mux_j9c.tdf                   ; yes             ; Auto-Generated Megafunction        ; /home/skeen/stepsniffer/db/mux_j9c.tdf                                               ;         ;
+; db/mux_l9c.tdf                   ; yes             ; Auto-Generated Megafunction        ; /home/skeen/stepsniffer/db/mux_l9c.tdf                                               ;         ;
 ; lpm_counter.tdf                  ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_counter.tdf         ;         ;
 ; lpm_decode.inc                   ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
 ; lpm_add_sub.inc                  ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
 ; cmpconst.inc                     ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/cmpconst.inc            ;         ;
 ; dffeea.inc                       ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/dffeea.inc              ;         ;
 ; alt_counter_stratix.inc          ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/alt_counter_stratix.inc ;         ;
-; db/cntr_cpe.tdf                  ; yes             ; Auto-Generated Megafunction        ; /home/skeen/stepsniffer/db/cntr_cpe.tdf                                              ;         ;
+; db/cntr_bpe.tdf                  ; yes             ; Auto-Generated Megafunction        ; /home/skeen/stepsniffer/db/cntr_bpe.tdf                                              ;         ;
 ; a_fefifo.tdf                     ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fefifo.tdf            ;         ;
 ; lpm_compare.tdf                  ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_compare.tdf         ;         ;
 ; comptree.inc                     ; yes             ; Megafunction                       ; /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/comptree.inc            ;         ;
-; db/cmpr_itf.tdf                  ; yes             ; Auto-Generated Megafunction        ; /home/skeen/stepsniffer/db/cmpr_itf.tdf                                              ;         ;
+; db/cmpr_htf.tdf                  ; yes             ; Auto-Generated Megafunction        ; /home/skeen/stepsniffer/db/cmpr_htf.tdf                                              ;         ;
 +----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------+---------+
 
 
@@ -199,53 +204,80 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+---------+
 ; Resource                                    ; Usage   ;
 +---------------------------------------------+---------+
-; Total logic elements                        ; 92      ;
-;     -- Combinational with no register       ; 30      ;
-;     -- Register only                        ; 2       ;
-;     -- Combinational with a register        ; 60      ;
+; Total logic elements                        ; 276     ;
+;     -- Combinational with no register       ; 108     ;
+;     -- Register only                        ; 112     ;
+;     -- Combinational with a register        ; 56      ;
 ;                                             ;         ;
 ; Logic element usage by number of LUT inputs ;         ;
-;     -- 4 input functions                    ; 32      ;
-;     -- 3 input functions                    ; 9       ;
-;     -- 2 input functions                    ; 45      ;
-;     -- 1 input functions                    ; 3       ;
+;     -- 4 input functions                    ; 93      ;
+;     -- 3 input functions                    ; 34      ;
+;     -- 2 input functions                    ; 31      ;
+;     -- 1 input functions                    ; 5       ;
 ;     -- 0 input functions                    ; 1       ;
 ;                                             ;         ;
 ; Logic elements by mode                      ;         ;
-;     -- normal mode                          ; 48      ;
-;     -- arithmetic mode                      ; 44      ;
+;     -- normal mode                          ; 256     ;
+;     -- arithmetic mode                      ; 20      ;
 ;     -- qfbk mode                            ; 0       ;
 ;     -- register cascade mode                ; 0       ;
-;     -- synchronous clear/load mode          ; 41      ;
+;     -- synchronous clear/load mode          ; 17      ;
 ;     -- asynchronous clear/load mode         ; 0       ;
 ;                                             ;         ;
-; Total registers                             ; 62      ;
-; Total logic cells in carry chains           ; 47      ;
+; Total registers                             ; 168     ;
+; Total logic cells in carry chains           ; 22      ;
 ; I/O pins                                    ; 11      ;
 ; Maximum fan-out node                        ; OSC_CLK ;
-; Maximum fan-out                             ; 62      ;
-; Total fan-out                               ; 380     ;
-; Average fan-out                             ; 3.69    ;
+; Maximum fan-out                             ; 168     ;
+; Total fan-out                               ; 978     ;
+; Average fan-out                             ; 3.41    ;
 +---------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                 ;
-+------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------+-------------------+--------------+
-; Compilation Hierarchy Node               ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                              ; Entity Name       ; Library Name ;
-+------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------+-------------------+--------------+
-; |simple                                  ; 92 (1)      ; 62           ; 0          ; 11   ; 0            ; 30 (1)       ; 2 (0)             ; 60 (0)           ; 47 (0)          ; 0 (0)      ; |simple                                                                                          ; simple            ; work         ;
-;    |ClockPrescaler:inst31|               ; 34 (34)     ; 25           ; 0          ; 0    ; 0            ; 9 (9)        ; 1 (1)             ; 24 (24)          ; 24 (24)         ; 0 (0)      ; |simple|ClockPrescaler:inst31                                                                    ; ClockPrescaler    ; work         ;
-;    |async_transmitter:ewrq|              ; 38 (21)     ; 27           ; 0          ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 27 (10)          ; 17 (0)          ; 0 (0)      ; |simple|async_transmitter:ewrq                                                                   ; async_transmitter ; work         ;
-;       |BaudTickGen:tickgen|              ; 17 (17)     ; 17           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 17 (17)          ; 17 (17)         ; 0 (0)      ; |simple|async_transmitter:ewrq|BaudTickGen:tickgen                                               ; BaudTickGen       ; work         ;
-;    |comparator:inst|                     ; 2 (2)       ; 1            ; 0          ; 0    ; 0            ; 1 (1)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |simple|comparator:inst                                                                          ; comparator        ; work         ;
-;    |lpm_fifo:inst6|                      ; 17 (0)      ; 9            ; 0          ; 0    ; 0            ; 8 (0)        ; 0 (0)             ; 9 (0)            ; 6 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6                                                                           ; lpm_fifo          ; work         ;
-;       |scfifo:myFIFO|                    ; 17 (0)      ; 9            ; 0          ; 0    ; 0            ; 8 (0)        ; 0 (0)             ; 9 (0)            ; 6 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO                                                             ; scfifo            ; work         ;
-;          |a_fffifo:subfifo|              ; 17 (2)      ; 9            ; 0          ; 0    ; 0            ; 8 (2)        ; 0 (0)             ; 9 (0)            ; 6 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo                                            ; a_fffifo          ; work         ;
-;             |a_fefifo:fifo_state|        ; 9 (9)       ; 3            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state                        ; a_fefifo          ; work         ;
-;             |lpm_counter:rd_ptr|         ; 6 (0)       ; 6            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 6 (0)            ; 6 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr                         ; lpm_counter       ; work         ;
-;                |cntr_cpe:auto_generated| ; 6 (6)       ; 6            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 6 (6)            ; 6 (6)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated ; cntr_cpe          ; work         ;
-+------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------+-------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                   ;
++-----------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node                          ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                                  ; Entity Name          ; Library Name ;
++-----------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
+; |simple                                             ; 276 (3)     ; 168          ; 0          ; 11   ; 0            ; 108 (3)      ; 112 (0)           ; 56 (0)           ; 22 (0)          ; 0 (0)      ; |simple                                                                                                                              ; simple               ; work         ;
+;    |PushButton_Debouncer:inst3|                     ; 8 (8)       ; 6            ; 0          ; 0    ; 0            ; 2 (2)        ; 1 (1)             ; 5 (5)            ; 0 (0)           ; 0 (0)      ; |simple|PushButton_Debouncer:inst3                                                                                                   ; PushButton_Debouncer ; work         ;
+;    |PushButton_Debouncer:inst7|                     ; 8 (8)       ; 6            ; 0          ; 0    ; 0            ; 2 (2)        ; 1 (1)             ; 5 (5)            ; 0 (0)           ; 0 (0)      ; |simple|PushButton_Debouncer:inst7                                                                                                   ; PushButton_Debouncer ; work         ;
+;    |PushButton_Debouncer:inst8|                     ; 8 (8)       ; 6            ; 0          ; 0    ; 0            ; 2 (2)        ; 1 (1)             ; 5 (5)            ; 0 (0)           ; 0 (0)      ; |simple|PushButton_Debouncer:inst8                                                                                                   ; PushButton_Debouncer ; work         ;
+;    |async_transmitter:ewrq|                         ; 38 (21)     ; 27           ; 0          ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 27 (10)          ; 17 (0)          ; 0 (0)      ; |simple|async_transmitter:ewrq                                                                                                       ; async_transmitter    ; work         ;
+;       |BaudTickGen:tickgen|                         ; 17 (17)     ; 17           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 17 (17)          ; 17 (17)         ; 0 (0)      ; |simple|async_transmitter:ewrq|BaudTickGen:tickgen                                                                                   ; BaudTickGen          ; work         ;
+;    |comparator:inst|                                ; 2 (2)       ; 1            ; 0          ; 0    ; 0            ; 1 (1)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |simple|comparator:inst                                                                                                              ; comparator           ; work         ;
+;    |lpm_fifo:inst6|                                 ; 209 (0)     ; 122          ; 0          ; 0    ; 0            ; 87 (0)       ; 108 (0)           ; 14 (0)           ; 5 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6                                                                                                               ; lpm_fifo             ; work         ;
+;       |scfifo:myFIFO|                               ; 209 (0)     ; 122          ; 0          ; 0    ; 0            ; 87 (0)       ; 108 (0)           ; 14 (0)           ; 5 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO                                                                                                 ; scfifo               ; work         ;
+;          |a_fffifo:subfifo|                         ; 209 (3)     ; 122          ; 0          ; 0    ; 0            ; 87 (3)       ; 108 (0)           ; 14 (0)           ; 5 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo                                                                                ; a_fffifo             ; work         ;
+;             |a_fefifo:fifo_state|                   ; 9 (8)       ; 3            ; 0          ; 0    ; 0            ; 6 (5)        ; 0 (0)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state                                                            ; a_fefifo             ; work         ;
+;                |lpm_compare:is_almost_full_compare| ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|lpm_compare:is_almost_full_compare                         ; lpm_compare          ; work         ;
+;                   |cmpr_htf:auto_generated|         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|lpm_compare:is_almost_full_compare|cmpr_htf:auto_generated ; cmpr_htf             ; work         ;
+;             |lpm_counter:rd_ptr|                    ; 5 (0)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (0)            ; 5 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr                                                             ; lpm_counter          ; work         ;
+;                |cntr_bpe:auto_generated|            ; 5 (5)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (5)            ; 5 (5)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_bpe:auto_generated                                     ; cntr_bpe             ; work         ;
+;             |lpm_ff:data_node[0][0]|                ; 6 (6)       ; 6            ; 0          ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][0]                                                         ; lpm_ff               ; work         ;
+;             |lpm_ff:data_node[0][10]|               ; 6 (6)       ; 6            ; 0          ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][10]                                                        ; lpm_ff               ; work         ;
+;             |lpm_ff:data_node[0][11]|               ; 6 (6)       ; 6            ; 0          ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][11]                                                        ; lpm_ff               ; work         ;
+;             |lpm_ff:data_node[0][12]|               ; 6 (6)       ; 6            ; 0          ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][12]                                                        ; lpm_ff               ; work         ;
+;             |lpm_ff:data_node[0][13]|               ; 6 (6)       ; 6            ; 0          ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][13]                                                        ; lpm_ff               ; work         ;
+;             |lpm_ff:data_node[0][14]|               ; 6 (6)       ; 6            ; 0          ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][14]                                                        ; lpm_ff               ; work         ;
+;             |lpm_ff:data_node[0][15]|               ; 6 (6)       ; 6            ; 0          ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][15]                                                        ; lpm_ff               ; work         ;
+;             |lpm_ff:data_node[0][2]|                ; 6 (6)       ; 6            ; 0          ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][2]                                                         ; lpm_ff               ; work         ;
+;             |lpm_ff:data_node[0][3]|                ; 6 (6)       ; 6            ; 0          ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][3]                                                         ; lpm_ff               ; work         ;
+;             |lpm_ff:data_node[0][4]|                ; 6 (6)       ; 6            ; 0          ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][4]                                                         ; lpm_ff               ; work         ;
+;             |lpm_ff:data_node[0][5]|                ; 6 (6)       ; 6            ; 0          ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][5]                                                         ; lpm_ff               ; work         ;
+;             |lpm_ff:data_node[0][6]|                ; 6 (6)       ; 6            ; 0          ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][6]                                                         ; lpm_ff               ; work         ;
+;             |lpm_ff:data_node[0][7]|                ; 6 (6)       ; 6            ; 0          ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][7]                                                         ; lpm_ff               ; work         ;
+;             |lpm_ff:data_node[0][8]|                ; 6 (6)       ; 6            ; 0          ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][8]                                                         ; lpm_ff               ; work         ;
+;             |lpm_ff:data_node[0][9]|                ; 6 (6)       ; 6            ; 0          ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][9]                                                         ; lpm_ff               ; work         ;
+;             |lpm_ff:last_data_node[0]|              ; 6 (6)       ; 6            ; 0          ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[0]                                                       ; lpm_ff               ; work         ;
+;             |lpm_ff:last_data_node[1]|              ; 6 (6)       ; 6            ; 0          ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[1]                                                       ; lpm_ff               ; work         ;
+;             |lpm_ff:last_data_node[2]|              ; 6 (6)       ; 6            ; 0          ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[2]                                                       ; lpm_ff               ; work         ;
+;             |lpm_ff:output_buffer|                  ; 8 (8)       ; 6            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 6 (6)            ; 0 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:output_buffer                                                           ; lpm_ff               ; work         ;
+;             |lpm_mux:col_data_out_mux|              ; 6 (0)       ; 0            ; 0          ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_mux:col_data_out_mux                                                       ; lpm_mux              ; work         ;
+;                |mux_j9c:auto_generated|             ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_mux:col_data_out_mux|mux_j9c:auto_generated                                ; mux_j9c              ; work         ;
+;             |lpm_mux:row_data_out_mux[0]|           ; 70 (0)      ; 0            ; 0          ; 0    ; 0            ; 70 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_mux:row_data_out_mux[0]                                                    ; lpm_mux              ; work         ;
+;                |mux_bbc:auto_generated|             ; 70 (70)     ; 0            ; 0          ; 0    ; 0            ; 70 (70)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_mux:row_data_out_mux[0]|mux_bbc:auto_generated                             ; mux_bbc              ; work         ;
++-----------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -261,14 +293,20 @@ Encoding Type:  One-Hot
 +--------------+--------------+------------+-------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; async_transmitter:ewrq|TxD_shift[6,7] ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 2 ;                                        ;
-+---------------------------------------+----------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                      ;
++------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
+; Register name                                                                ; Reason for Removal                                                                       ;
++------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
+; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][1]|dffs[5] ; Merged with lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][0]|dffs[5] ;
+; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][1]|dffs[4] ; Merged with lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][0]|dffs[4] ;
+; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][1]|dffs[3] ; Merged with lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][0]|dffs[3] ;
+; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][1]|dffs[2] ; Merged with lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][0]|dffs[2] ;
+; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][1]|dffs[1] ; Merged with lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][0]|dffs[1] ;
+; lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][1]|dffs[0] ; Merged with lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][0]|dffs[0] ;
+; async_transmitter:ewrq|TxD_shift[6,7]                                        ; Stuck at GND due to stuck port data_in                                                   ;
+; Total Number of Removed Registers = 8                                        ;                                                                                          ;
++------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------+
@@ -286,23 +324,24 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 62    ;
-; Number of registers using Synchronous Clear  ; 24    ;
+; Total registers                              ; 168   ;
+; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 17    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 11    ;
+; Number of registers using Clock Enable       ; 124   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |simple|async_transmitter:ewrq|TxD_shift[1] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------+
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |simple|async_transmitter:ewrq|TxD_shift[1]                                        ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |simple|lpm_fifo:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:output_buffer|dffs[2] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------+
@@ -334,14 +373,47 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name          ; Value ; Type                      ;
 +-------------------------+-------+---------------------------+
 ; lpm_width               ; 6     ; Untyped                   ;
-; LPM_NUMWORDS            ; 64    ; Untyped                   ;
-; LPM_WIDTHU              ; 6     ; Untyped                   ;
+; LPM_NUMWORDS            ; 18    ; Untyped                   ;
+; LPM_WIDTHU              ; 5     ; Untyped                   ;
 ; LPM_SHOWAHEAD           ; OFF   ; Untyped                   ;
 ; UNDERFLOW_CHECKING      ; ON    ; Untyped                   ;
 ; OVERFLOW_CHECKING       ; ON    ; Untyped                   ;
 ; ALLOW_RWCYCLE_WHEN_FULL ; OFF   ; Untyped                   ;
 ; USE_EAB                 ; ON    ; Untyped                   ;
 +-------------------------+-------+---------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: single_pin:inst16 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; input_bits     ; 3     ; Signed Integer                        ;
+; pin_number     ; 2     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: single_pin:inst14 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; input_bits     ; 3     ; Signed Integer                        ;
+; pin_number     ; 1     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: single_pin:inst10 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; input_bits     ; 3     ; Signed Integer                        ;
+; pin_number     ; 0     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -378,23 +450,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: comparator:inst2 ;
-+----------------+-------+--------------------------------------+
-; Parameter Name ; Value ; Type                                 ;
-+----------------+-------+--------------------------------------+
-; n              ; 3     ; Signed Integer                       ;
-+----------------+-------+--------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.1 Build 218 06/01/2016 SJ Lite Edition
-    Info: Processing started: Mon Jun 20 23:04:18 2016
+    Info: Processing started: Thu Jun 23 19:58:55 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off simple -c simple
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file simple.bdf
@@ -416,6 +478,11 @@ Info (12021): Found 2 design units, including 1 entities, in source file padder.
 Info (12021): Found 2 design units, including 1 entities, in source file ClockPrescaler.vhd
     Info (12022): Found design unit 1: ClockPrescaler-Behavioral File: /home/skeen/stepsniffer/ClockPrescaler.vhd Line: 12
     Info (12023): Found entity 1: ClockPrescaler File: /home/skeen/stepsniffer/ClockPrescaler.vhd Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file debouncer.v
+    Info (12023): Found entity 1: PushButton_Debouncer File: /home/skeen/stepsniffer/debouncer.v Line: 1
+Info (12021): Found 2 design units, including 1 entities, in source file single_pin.vhd
+    Info (12022): Found design unit 1: single_pin-single_pin_arch File: /home/skeen/stepsniffer/single_pin.vhd Line: 16
+    Info (12023): Found entity 1: single_pin File: /home/skeen/stepsniffer/single_pin.vhd Line: 5
 Info (12127): Elaborating entity "simple" for the top level hierarchy
 Info (12128): Elaborating entity "async_transmitter" for hierarchy "async_transmitter:ewrq"
 Info (12128): Elaborating entity "BaudTickGen" for hierarchy "async_transmitter:ewrq|BaudTickGen:tickgen" File: /home/skeen/stepsniffer/uart.v Line: 36
@@ -423,10 +490,10 @@ Info (12128): Elaborating entity "LPM_FIFO" for hierarchy "LPM_FIFO:inst6"
 Info (12130): Elaborated megafunction instantiation "LPM_FIFO:inst6"
 Info (12133): Instantiated megafunction "LPM_FIFO:inst6" with the following parameter:
     Info (12134): Parameter "ALLOW_RWCYCLE_WHEN_FULL" = "OFF"
-    Info (12134): Parameter "LPM_NUMWORDS" = "64"
+    Info (12134): Parameter "LPM_NUMWORDS" = "18"
     Info (12134): Parameter "LPM_SHOWAHEAD" = "OFF"
     Info (12134): Parameter "LPM_WIDTH" = "6"
-    Info (12134): Parameter "LPM_WIDTHU" = "6"
+    Info (12134): Parameter "LPM_WIDTHU" = "5"
     Info (12134): Parameter "OVERFLOW_CHECKING" = "ON"
     Info (12134): Parameter "UNDERFLOW_CHECKING" = "ON"
     Info (12134): Parameter "USE_EAB" = "ON"
@@ -434,48 +501,53 @@ Info (12128): Elaborating entity "scfifo" for hierarchy "LPM_FIFO:inst6|scfifo:m
 Info (12131): Elaborated megafunction instantiation "LPM_FIFO:inst6|scfifo:myFIFO", which is child of megafunction instantiation "LPM_FIFO:inst6" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_fifo.tdf Line: 54
 Info (12128): Elaborating entity "a_fffifo" for hierarchy "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/scfifo.tdf Line: 279
 Info (12131): Elaborated megafunction instantiation "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo", which is child of megafunction instantiation "LPM_FIFO:inst6" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/scfifo.tdf Line: 279
-Info (12128): Elaborating entity "lpm_ff" for hierarchy "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[63]" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fffifo.tdf Line: 102
-Info (12131): Elaborated megafunction instantiation "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:last_data_node[63]", which is child of megafunction instantiation "LPM_FIFO:inst6" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fffifo.tdf Line: 102
+Info (12128): Elaborating entity "lpm_ff" for hierarchy "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][15]" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fffifo.tdf Line: 95
+Info (12131): Elaborated megafunction instantiation "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_ff:data_node[0][15]", which is child of megafunction instantiation "LPM_FIFO:inst6" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fffifo.tdf Line: 95
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_mux:row_data_out_mux[0]" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fffifo.tdf Line: 96
+Info (12131): Elaborated megafunction instantiation "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_mux:row_data_out_mux[0]", which is child of megafunction instantiation "LPM_FIFO:inst6" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fffifo.tdf Line: 96
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_bbc.tdf
+    Info (12023): Found entity 1: mux_bbc File: /home/skeen/stepsniffer/db/mux_bbc.tdf Line: 23
+Info (12128): Elaborating entity "mux_bbc" for hierarchy "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_mux:row_data_out_mux[0]|mux_bbc:auto_generated" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_mux:col_data_out_mux" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fffifo.tdf Line: 97
+Info (12131): Elaborated megafunction instantiation "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_mux:col_data_out_mux", which is child of megafunction instantiation "LPM_FIFO:inst6" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fffifo.tdf Line: 97
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_j9c.tdf
+    Info (12023): Found entity 1: mux_j9c File: /home/skeen/stepsniffer/db/mux_j9c.tdf Line: 23
+Info (12128): Elaborating entity "mux_j9c" for hierarchy "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_mux:col_data_out_mux|mux_j9c:auto_generated" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
 Info (12128): Elaborating entity "lpm_mux" for hierarchy "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_mux:last_row_data_out_mux" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fffifo.tdf Line: 103
 Info (12131): Elaborated megafunction instantiation "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_mux:last_row_data_out_mux", which is child of megafunction instantiation "LPM_FIFO:inst6" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fffifo.tdf Line: 103
-Info (12021): Found 1 design units, including 1 entities, in source file db/mux_gbc.tdf
-    Info (12023): Found entity 1: mux_gbc File: /home/skeen/stepsniffer/db/mux_gbc.tdf Line: 23
-Info (12128): Elaborating entity "mux_gbc" for hierarchy "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_mux:last_row_data_out_mux|mux_gbc:auto_generated" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_l9c.tdf
+    Info (12023): Found entity 1: mux_l9c File: /home/skeen/stepsniffer/db/mux_l9c.tdf Line: 23
+Info (12128): Elaborating entity "mux_l9c" for hierarchy "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_mux:last_row_data_out_mux|mux_l9c:auto_generated" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
 Info (12128): Elaborating entity "lpm_counter" for hierarchy "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fffifo.tdf Line: 105
 Info (12131): Elaborated megafunction instantiation "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr", which is child of megafunction instantiation "LPM_FIFO:inst6" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fffifo.tdf Line: 105
-Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_cpe.tdf
-    Info (12023): Found entity 1: cntr_cpe File: /home/skeen/stepsniffer/db/cntr_cpe.tdf Line: 26
-Info (12128): Elaborating entity "cntr_cpe" for hierarchy "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_cpe:auto_generated" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_counter.tdf Line: 259
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_bpe.tdf
+    Info (12023): Found entity 1: cntr_bpe File: /home/skeen/stepsniffer/db/cntr_bpe.tdf Line: 26
+Info (12128): Elaborating entity "cntr_bpe" for hierarchy "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|lpm_counter:rd_ptr|cntr_bpe:auto_generated" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_counter.tdf Line: 259
 Info (12128): Elaborating entity "a_fefifo" for hierarchy "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fffifo.tdf Line: 112
 Info (12131): Elaborated megafunction instantiation "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state", which is child of megafunction instantiation "LPM_FIFO:inst6" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fffifo.tdf Line: 112
 Info (12128): Elaborating entity "lpm_compare" for hierarchy "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|lpm_compare:is_almost_empty_compare" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fefifo.tdf Line: 77
 Info (12131): Elaborated megafunction instantiation "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|lpm_compare:is_almost_empty_compare", which is child of megafunction instantiation "LPM_FIFO:inst6" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fefifo.tdf Line: 77
-Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_itf.tdf
-    Info (12023): Found entity 1: cmpr_itf File: /home/skeen/stepsniffer/db/cmpr_itf.tdf Line: 23
-Info (12128): Elaborating entity "cmpr_itf" for hierarchy "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|lpm_compare:is_almost_empty_compare|cmpr_itf:auto_generated" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_compare.tdf Line: 281
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_htf.tdf
+    Info (12023): Found entity 1: cmpr_htf File: /home/skeen/stepsniffer/db/cmpr_htf.tdf Line: 23
+Info (12128): Elaborating entity "cmpr_htf" for hierarchy "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|lpm_compare:is_almost_empty_compare|cmpr_htf:auto_generated" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/lpm_compare.tdf Line: 281
 Info (12128): Elaborating entity "lpm_compare" for hierarchy "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|lpm_compare:is_almost_full_compare" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fefifo.tdf Line: 82
 Info (12131): Elaborated megafunction instantiation "LPM_FIFO:inst6|scfifo:myFIFO|a_fffifo:subfifo|a_fefifo:fifo_state|lpm_compare:is_almost_full_compare", which is child of megafunction instantiation "LPM_FIFO:inst6" File: /home/skeen/altera_lite/16.0/quartus/libraries/megafunctions/a_fefifo.tdf Line: 82
-Info (12128): Elaborating entity "ClockPrescaler" for hierarchy "ClockPrescaler:inst31"
-Warning (10540): VHDL Signal Declaration warning at ClockPrescaler.vhd(14): used explicit default value for signal "prescaler" because signal was never assigned a value File: /home/skeen/stepsniffer/ClockPrescaler.vhd Line: 14
+Info (12128): Elaborating entity "PushButton_Debouncer" for hierarchy "PushButton_Debouncer:inst8"
+Warning (10230): Verilog HDL assignment warning at debouncer.v(29): truncated value with size 16 to match size of target (3) File: /home/skeen/stepsniffer/debouncer.v Line: 29
+Info (12128): Elaborating entity "single_pin" for hierarchy "single_pin:inst16"
+Info (12128): Elaborating entity "single_pin" for hierarchy "single_pin:inst14"
+Info (12128): Elaborating entity "single_pin" for hierarchy "single_pin:inst10"
 Info (12128): Elaborating entity "comparator" for hierarchy "comparator:inst"
 Info (12128): Elaborating entity "combiner" for hierarchy "combiner:inst9"
 Info (12128): Elaborating entity "padder" for hierarchy "padder:inst11"
-Info (12128): Elaborating entity "comparator" for hierarchy "comparator:inst2"
-Warning (21074): Design contains 6 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "steps[2]"
-    Warning (15610): No output dependent on input pin "steps[1]"
-    Warning (15610): No output dependent on input pin "steps[0]"
-    Warning (15610): No output dependent on input pin "dirs[2]"
-    Warning (15610): No output dependent on input pin "dirs[1]"
-    Warning (15610): No output dependent on input pin "dirs[0]"
-Info (21057): Implemented 103 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 287 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 92 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 1262 megabytes
-    Info: Processing ended: Mon Jun 20 23:04:30 2016
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:28
+    Info (21061): Implemented 276 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 1260 megabytes
+    Info: Processing ended: Thu Jun 23 19:59:08 2016
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:29
 
 
